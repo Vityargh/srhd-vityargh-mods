@@ -2,9 +2,8 @@
 
 [English version below](#english)
 
-Привет всем, кто до сих пор летает в «Космических рейнджерах»! 🚀
-
-Собрал несколько небольших модов, которых мне самому не хватало в игре. Делюсь — может, пригодятся и вам.
+Привет всем, кто до сих пор летает в Космических рейнджерах 
+Сделал несколько небольших модов, которых мне самому не хватало в игре. Делюсь — может, пригодятся и вам.
 
 ## Что они дают
 
@@ -17,7 +16,7 @@
 **BureauAffordableDesign — своё КБ по карману.**
 Проекты собственных корпусов, оружия и оборудования в конструкторском бюро стоят в 10 раз меньше кредитов. Ресурсы и сроки разработки прежние.
 
-> ⚠️ Это тестовая версия: моды прошли автоматические проверки, но в долгой игре пока обкатываются. Сделайте копию сохранения перед установкой — и, пожалуйста, расскажите, если что-то пойдёт не так.
+> ⚠️⚠️⚠️ Это тестовая версия: моды прошли автоматические проверки, но в долгой игре пока обкатываются. Сделайте копию сохранения перед установкой — и, пожалуйста, расскажите, если что-то пойдёт не так ⚠️⚠️⚠️
 
 | Мод | Версия | Нужен загрузчик | Подробнее |
 |---|---|---|---|
@@ -68,8 +67,7 @@ tools/   сборка архивов релиза
 Проверено на Space Rangers HD: A War Apart 2.1.2500 (Steam). Тексты модов — на русском и английском.
 Огромное спасибо Xenomorphchyma за загрузчик [XenoNativeLoader](https://github.com/Xenomorphchyma/XenoMods) (лицензия PolyForm Noncommercial 1.0.0). В репозитории его нет — он входит только в архивы релиза.
 
-Приятных полётов и чистых орбит! 🛰️
-— Vityargh
+Удачи!
 
 ---
 
@@ -92,7 +90,7 @@ Enabling a mod and pressing Apply in the mod list used to crash the game. Not an
 **BureauAffordableDesign — a design bureau you can afford.**
 Your own hull, weapon and equipment projects cost 10 times fewer credits. Resources and development time stay the same.
 
-> ⚠️ This is a test release: the mods passed automated checks but are still being played through. Back up your save before installing, and please let me know if something goes wrong.
+> ⚠️⚠️⚠️ This is a test release: the mods passed automated checks but are still being played through. Back up your save before installing, and please let me know if something goes wrong ⚠️⚠️⚠️
 
 | Mod | Version | Needs the loader | Details |
 |---|---|---|---|
@@ -143,5 +141,4 @@ Build instructions are in [src/BUILD.md](src/BUILD.md) (in Russian). The code is
 Tested on Space Rangers HD: A War Apart 2.1.2500 (Steam). The mods' texts are in Russian and English.
 Huge thanks to Xenomorphchyma for [XenoNativeLoader](https://github.com/Xenomorphchyma/XenoMods) (PolyForm Noncommercial 1.0.0 license). It is not stored in this repository, only in the release archives.
 
-Clear skies and clean orbits! 🛰️
-— Vityargh
+Goodluck!
