@@ -3,7 +3,6 @@
 Outputs (S:\\SR\\release\\out):
   Vityargh-SmartLootAI-0.9-ApplyCrashFix-1.0.zip    - unpack into the game folder; includes XenoNativeLoader
   Vityargh-BureauAffordableDesign-1.0.zip           - plain mod, no loader needed
-  ApplyCrashFix-1.0-submission.zip                  - for Xenomorphchyma (mod + source + test + write-ups)
 Paths inside archives use forward slashes; every archive is re-read and compared with its sources.
 """
 from pathlib import Path
@@ -61,17 +60,9 @@ def main():
               ('ПРОЧТИ.txt', text((SR / 'release' / 'PROCHTI.txt').read_text(encoding='utf-8')))]
     bundle += list(tree(sl, 'Mods/OtherMods/SmartLootAI'))
     bundle += list(tree(acf, 'Mods/OtherMods/ApplyCrashFix'))
-    sub = SR / 'ApplyCrashFix' / 'submission'
-    # Player README stays in the player bundle; the submission has README_EN/RU at its root.
-    submission = list(tree(acf, 'ApplyCrashFix-1.0/ApplyCrashFix', skip=('README_RU.md',)))
-    submission += [('ApplyCrashFix-1.0/README_EN.md', (sub / 'README_EN.md').read_bytes()),
-                   ('ApplyCrashFix-1.0/README_RU.md', (sub / 'README_RU.md').read_bytes()),
-                   ('ApplyCrashFix-1.0/source/applyfix.c', (SR / 'ApplyCrashFix/src/applyfix.c').read_bytes()),
-                   ('ApplyCrashFix-1.0/source/build.py', (SR / 'ApplyCrashFix/build.py').read_bytes()),
-                   ('ApplyCrashFix-1.0/source/tests/pin_test.c', (SR / 'ApplyCrashFix/tests/pin_test.c').read_bytes())]
+    # ApplyCrashFix sources live in the public repo (src/ApplyCrashFix); no separate submission archive.
     report = [write('Vityargh-SmartLootAI-0.9-ApplyCrashFix-1.0.zip', bundle),
-              write('Vityargh-BureauAffordableDesign-1.0.zip', list(tree(bad, 'Mods/OtherMods/BureauAffordableDesign'))),
-              write('ApplyCrashFix-1.0-submission.zip', submission)]
+              write('Vityargh-BureauAffordableDesign-1.0.zip', list(tree(bad, 'Mods/OtherMods/BureauAffordableDesign')))]
     (OUT / 'release-manifest.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
     for r in report:
         print(f"{r['archive']}: {r['size']} bytes, {len(r['files'])} files, verified")

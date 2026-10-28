@@ -34,6 +34,18 @@ A pinned module ignores `FreeLibrary`, so the orphaned window procedure stays va
 
 The DLL is a 4 KB x86 PE built with TinyCC from `src/applyfix.c` (`build.py`); a rebuild is byte-identical to the shipped binary (SHA-256 `4A3A1C21…4D35CC6C`).
 
+## Files
+
+| Path | What it is |
+|---|---|
+| `src/applyfix.c` | the whole plugin, about 60 lines |
+| `tests/pin_test.c` | repro of the Apply sequence: loads MatrixGame.dll, frees it, checks whether the crash address is still mapped |
+| `build.py` | builds the DLL with TinyCC and fixes the export names; paths inside point to the author's machine |
+| `make_moduleinfo.py` | generates the in-game mod description |
+| `../../mods/ApplyCrashFix/` | the ready-to-use mod: `ModuleInfo.txt`, `Native/ApplyCrashFix.XenoPlugin.dll` and `.ini` |
+
+Build by hand without `build.py`: `tcc -shared -o ApplyCrashFix.XenoPlugin.dll src/applyfix.c -lkernel32`, then remove the stdcall decoration from the two exports (`_XenoPlugin_Query@4` → `XenoPlugin_Query`, same for `XenoPlugin_Initialize`).
+
 ## Install (players)
 
 Copy `ApplyCrashFix` into `Mods\OtherMods\`, enable it in the mod manager and restart the game once. Requires XenoNativeLoader.
