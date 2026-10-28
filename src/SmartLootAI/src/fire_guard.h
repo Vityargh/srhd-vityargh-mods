@@ -3,6 +3,7 @@ static int explosionRadiusSquared=40000;
 static int __cdecl allowCleanupShot(void *ship,void *weapon,void *target) {
     void *star,*items;Candidate *c;int i,j,n,allowed=0,explosive;
     if(ship==(void*)player(0,0))return 1;
+    if(!activeJunkCleanup && !serviceMember(ship))return 1; /* Passive: stock fire logic, no filtering. */
     star=PTR(ship,0x24);if(!star)return 0;items=PTR(star,0x30);
     if(!contains(items,target))return 0; /* Do not dereference stale item pointers. */
     c=collectCandidates(ship,items,listCount(items),&n);
@@ -20,6 +21,13 @@ static int __cdecl allowCleanupShot(void *ship,void *weapon,void *target) {
     }
     free(c);if(!allowed && weapon && PTR(weapon,0x70)==target)PTR(weapon,0x70)=0;
     return allowed;
+}
+/* Stock AI asks this routine whether an item may be shot. With cleanup on the mod decides
+   (answer "no" to the stock AI); with cleanup off the original routine runs unchanged. */
+static void *emitDetonateGate(void *original) {
+    unsigned char *w;
+    if(!activeJunkCleanup) return original;
+    w=allocCode(16);w[0]=0x31;w[1]=0xc0;w[2]=0xc3;return w;
 }
 static void *emitFireGuard(void *original) {
     unsigned char *w=allocCode(80);unsigned n=0,branch;

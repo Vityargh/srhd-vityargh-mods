@@ -24,5 +24,11 @@ int main(void){
     setupService(1);FLOAT(itemData[0],0x10)=401;assert(SL_Clean(testShip,10)==0);assert(SL_Move(testShip));assert(moves==1 && lastMove.x>100 && lastMove.x<102 && BYTE(testShip,0x44c)==1);
     setupService(1);BYTE(itemData[0],0xc)=71;assert(SL_Clean(testShip,10)==0);
     setupService(1);PTR(script,8)=L"Script.Unrelated";assert(!SL_Prepare(testShip) && !SL_Target(testShip) && !SL_Clean(testShip,10));
-    puts("PASS service API: script identity; NoDrop/NoTarget/order ownership; refuel; cap10; exact400/401; approach; micromodules; unrelated ships untouched.");return 0;
+    /* Janitors already in a save with cleanup off: no work, no targets, no shots; their stock targets cleared. */
+    setupService(12);activeJunkCleanup=0;
+    assert(!SL_CountWork(PTR(testShip,0x24)) && !SL_Target(testShip) && SL_Clean(testShip,10)==0 && fired==0);
+    PTR(testWeapon,0x70)=itemData[0];assert(!allowCleanupShot(testShip,testWeapon,itemData[0]) && !PTR(testWeapon,0x70));
+    PTR(testWeapon,0x70)=itemData[0];afterAssign(testShip);assert(!PTR(testWeapon,0x70));
+    activeJunkCleanup=1;
+    puts("PASS service API: janitors idle with cleanup off; script identity; NoDrop/NoTarget/order ownership; refuel; cap10; exact400/401; approach; micromodules; unrelated ships untouched.");return 0;
 }

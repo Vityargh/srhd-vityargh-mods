@@ -36,9 +36,25 @@ int main(void) {
     afterAssign(testShip);assert(target()==itemData[0] && !PTR(otherWeapon,0x70));
     PTR(testWeapon,0x70)=0;FLOAT(testOther,0x14)=200;afterAssign(testShip);assert(!target());
     FLOAT(testOther,0x14)=401;afterAssign(testShip);assert(target() && PTR(otherWeapon,0x70));
-    /* ActiveJunkCleanup=0: the mod must leave existing item targets (stock AI or other mods' scripts) alone. */
-    reset(1);BYTE(itemData[0],0xc)=4;activeJunkCleanup=0;PTR(testWeapon,0x70)=itemData[0];
-    afterAssign(testShip);assert(target()==itemData[0]);activeJunkCleanup=1;
-    puts("PASS v2 core: cleanup-off keeps foreign item targets; explicit unknown protection; 34 artifacts and micromodules; quest price boundary; nodes 29/30/1000/1001; equipment 49/50/51/60 and cheapest excess; normal/janitor barrels; independent gun ranges.");
+    /* ActiveJunkCleanup=0: passive. Stock and script-assigned item targets survive afterAssign and the
+       fire-time guard, including protected items (artifact 20, micromodule 71) and excess-free equipment. */
+    for(t=0;t<3;++t){static const int types[3]={4,20,71};
+        reset(1);BYTE(itemData[0],0xc)=types[t];activeJunkCleanup=0;PTR(testWeapon,0x70)=itemData[0];
+        afterAssign(testShip);assert(target()==itemData[0]);
+        assert(allowCleanupShot(testShip,testWeapon,itemData[0]) && target()==itemData[0]);
+        activeJunkCleanup=1;}
+    /* Cleanup off: no new target is chosen for an idle gun either. */
+    reset(51);activeJunkCleanup=0;afterAssign(testShip);assert(!target());activeJunkCleanup=1;
+    /* Same situations with cleanup on: protections apply. */
+    reset(1);BYTE(itemData[0],0xc)=20;PTR(testWeapon,0x70)=itemData[0];afterAssign(testShip);assert(!target());
+    reset(1);BYTE(itemData[0],0xc)=20;PTR(testWeapon,0x70)=itemData[0];assert(!allowCleanupShot(testShip,testWeapon,itemData[0]) && !target());
+    reset(50);PTR(testWeapon,0x70)=itemData[0];assert(!allowCleanupShot(testShip,testWeapon,itemData[0]));
+    reset(1);BYTE(itemData[0],0xc)=4;PTR(testWeapon,0x70)=itemData[0];afterAssign(testShip);assert(target()==itemData[0]);
+    /* Stock "may shoot item" routine: untouched with cleanup off, answered by the mod with cleanup on. */
+    arena=VirtualAlloc(0,ARENA_SIZE,MEM_COMMIT|MEM_RESERVE,PAGE_EXECUTE_READWRITE);assert(arena);
+    {static unsigned char original[4];unsigned char *g;
+     activeJunkCleanup=0;assert(emitDetonateGate(original)==original);
+     activeJunkCleanup=1;g=emitDetonateGate(original);assert(g!=(unsigned char*)original && g[0]==0x31 && g[1]==0xc0 && g[2]==0xc3);}
+    puts("PASS v2 core: cleanup-off fully passive (targets, fire guard, stock detonate check); cleanup-on protections kept; explicit unknown protection; 34 artifacts and micromodules; quest price boundary; nodes 29/30/1000/1001; equipment 49/50/51/60 and cheapest excess; normal/janitor barrels; independent gun ranges.");
     return 0;
 }

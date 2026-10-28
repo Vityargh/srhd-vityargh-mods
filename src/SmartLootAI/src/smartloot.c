@@ -161,16 +161,17 @@ static void __cdecl afterAssign(void *ship) {
     void *star,*items,*weapons[5]; Candidate *candidates;
     if(serviceMember(ship)){int si;for(si=0;si<BYTE(ship,0x12c) && si<5;++si){void *sw=PTR(ship,0x118+4*si);if(sw)PTR(sw,0x70)=0;}return;}
     int count,i,j,n,candidateCount=0,eligible=0,realTarget=0;
+    if(!activeJunkCleanup) return; /* Passive: stock AI and other mods keep their targets. */
     if(ship==(void*)player(0,0) || !(star=PTR(ship,0x24)) || !inSpace(ship,0)) return;
     count=BYTE(ship,0x12c); if(count<1 || count>5) return;
     items=PTR(star,0x30); n=listCount(items); if(n<1 || n>100000) return;
-    /* With cleanup enabled the mod owns item targeting: non-asteroid item targets left from the stock
-       routine are dropped and re-chosen below by the policy. With cleanup disabled, targets are untouched. */
+    /* Cleanup is enabled here: the mod owns item targeting. Non-asteroid item targets left from the stock
+       routine are dropped and re-chosen below by the policy. */
     for(j=0;j<count;++j) {
         void *target;
         weapons[j]=PTR(ship,0x118+j*4); if(!weapons[j]) return;
         target=PTR(weapons[j],0x70);
-        if(activeJunkCleanup && target) for(i=0;i<n;++i) if(listAt(items,i)==target && BYTE(target,0xc)!=42) { PTR(weapons[j],0x70)=0; break; }
+        if(target) for(i=0;i<n;++i) if(listAt(items,i)==target && BYTE(target,0xc)!=42) { PTR(weapons[j],0x70)=0; break; }
         target=PTR(weapons[j],0x70);
         if(target && !contains(PTR(star,0x28),target)) realTarget=1;
     }
@@ -267,7 +268,7 @@ __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
             w[n++]=0x50;rel32(w+n,0xe8,t);n+=5;w[n++]=0x58;w[n++]=0x9c;w[n++]=0x60;w[n++]=0xfc;w[n++]=0x50;
             rel32(w+n,0xe8,i<7 ? afterAssign:onStarDay);n+=5;w[n++]=0x83;w[n++]=0xc4;w[n++]=4;w[n++]=0x61;w[n++]=0x9d;w[n++]=0xc3;
             p->replacement=w;
-        } else if(i==7) { unsigned char *w=allocCode(16);w[0]=0x31;w[1]=0xc0;w[2]=0xc3;p->replacement=w; }
+        } else if(i==7) { p->replacement=emitDetonateGate(t); }
         else {
             unsigned char *w=allocCode(64);unsigned n=0;
             void *callbacks[]={beforeMovement,onStarDay,onStarDay};
