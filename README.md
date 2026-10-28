@@ -2,6 +2,18 @@
 
 Моды для Space Rangers HD: A War Apart (2.1.2500, Steam).
 
+## Что дают моды
+
+**SmartLootAI — космос без свалки.** К середине партии системы забиты брошенными минералами, товарами и хламом: карта в мусоре, нужное теряется, игра тормозит. С модом обычные корабли сами расстреливают мусор свободными орудиями, а по галактике летает служба мусорщиков — неуязвимые корабли «Работяга», «Скат» и «Косточка», которые чистят системы и с которыми можно поболтать о тяжёлой жизни уборщика. Ценное не пропадает: артефакты, микромодули, ноды, корпуса, квестовые вещи и предметы из других модов не трогаются никогда, а оборудования в каждой системе остаётся до 50 штук.
+
+**ApplyCrashFix — больше никаких вылетов после «Применить».** Включили или выключили мод в списке, нажали «Применить» — и игра падала. Теперь нет.
+
+**BureauAffordableDesign — своё КБ по карману.** Проекты собственных корпусов, оружия и оборудования в конструкторском бюро стоят в 10 раз меньше кредитов. Например, 17 295 000 превращаются в 1 729 500. Ресурсы и сроки разработки прежние.
+
+> **Тестовая версия.** Моды проверены автоматическими тестами, но ещё не прошли полную проверку в игре. Сделайте копию сохранения перед установкой.
+
+## Моды
+
 | Мод | Версия | Что делает | Нужен загрузчик |
 |---|---|---|---|
 | [SmartLootAI](mods/SmartLootAI/README_RU.md) ([EN](mods/SmartLootAI/README_EN.md)) | 2.0.1 | Уборка лишнего лута и служба мусорщиков, RU/EN | да |
@@ -45,4 +57,12 @@ tools/   сборка архивов релиза
 
 ---
 
-**English:** mods for Space Rangers HD: A War Apart 2.1.2500. Download the archive from Releases, unpack it into the game folder (skip replacing `dsound.dll` / `XenoCore.dll` / `XenoNative.ini` if asked), enable the mods in the in-game mod list, press Apply and restart the game.
+**English**
+
+**SmartLootAI — space without the landfill.** By mid-game, star systems are buried in abandoned minerals, goods and junk. With this mod, ordinary ships shoot junk with their free weapons, and a janitor service of invulnerable ships — Elbow Grease, Skate and Wishbone — cleans up the galaxy (and they're happy to chat about the hard life of a space janitor). Nothing valuable is lost: artifacts, micromodules, nodes, hulls, quest items and items from other mods are never touched, and each system keeps up to 50 pieces of equipment.
+
+**ApplyCrashFix — no more crashes after Apply.** Toggling a mod and pressing Apply in the mod list used to crash the game. Not anymore.
+
+**BureauAffordableDesign — a design bureau you can afford.** Your own hull, weapon and equipment projects cost 10 times fewer credits. Resources and development time stay the same.
+
+Mods for Space Rangers HD: A War Apart 2.1.2500. Download the archive from Releases, unpack it into the game folder (skip replacing `dsound.dll` / `XenoCore.dll` / `XenoNative.ini` if asked), enable the mods in the in-game mod list, press Apply and restart the game.
