@@ -3,7 +3,7 @@
 [English version below](#english)
 
 Привет всем, кто до сих пор летает в Космических рейнджерах.
-Сделал несколько небольших модов, которых мне самому не хватало в игре. Делюсь — может, пригодятся и вам.
+Сделал несколько небольших модов, которых мне самому не хватало в игре. Делюсь — может, пригодятся и вам. Все же прыгают с ба..вайбкодят, так чем я хуже?)
 
 ## Что они дают
 
@@ -86,7 +86,7 @@ tools/   сборка архивов релиза
 # Vityargh's mods for Space Rangers HD: A War Apart
 
 Hi to everyone still flying in Space Rangers!
-I made a few small mods that I personally missed in the game. Sharing them in case you find them useful too.
+I made a few small mods that I personally missed in the game. Sharing them in case you find them useful too. If everyone is jumping off the balc...oh then why am I any worse? I want to vibecoding too.
 
 ## What they do
 
