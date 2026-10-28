@@ -8,7 +8,7 @@
 |---|---|
 | TinyCC (`tcc.exe`) | сборка x86 DLL и тестов |
 | Python-пакеты `pefile`, `capstone` | разбор `Rangers.exe`, генерация сигнатур |
-| [SRHD-XenoModKit](https://github.com/Xenomorphchyma/SRHD-XenoModKit) (`python -m srhd_modkit`) | сборка SCR из RSON, аудит, линтер |
+| [SRHD-XenoModKit](https://github.com/Xenomorphchyma/SRHD-XenoModKit) (`python -m srhd_modkit`; склонировать и добавить папку в `PYTHONPATH`) | сборка SCR из RSON, аудит, линтер |
 | RScript 4.15f | компилятор скриптов (вызывается из ModKit) |
 | BlockParEditor 2.1 | преобразование DAT ↔ TXT |
 
@@ -18,9 +18,12 @@
 cd src/SmartLootAI
 python src/build.py            # prepare.py (сигнатуры из Rangers.exe) + DLL через tcc
 python run_checks.py           # 6 наборов x86-тестов
-python generate_dialogue.py    # RSON скрипта службы + CrewLang.txt
-python -m srhd_modkit script build src/Mod_SmartLootServiceV2.rson --scr <RuntimeMod>/DATA/Script/Mod_SmartLootServiceV2.scr --lang src/CrewFragment.txt  # (CrewFragment.txt создаёт эта команда) --overwrite --tools-root <toolchain>
-python make_lang.py            # Lang.dat из CrewLang.txt с проверкой
+python generate_dialogue.py    # RSON скрипта службы + CrewLang.txt и CrewLang_Eng.txt
+# SCR скрипта службы. --lang - выходной файл: RScript пишет туда фрагмент текстов (src/CrewFragment.txt).
+# Фрагмент в игру не идёт: Lang.dat собирает make_lang.py из CrewLang*.txt.
+# <toolchain> - папка, где лежит RScript (например S:\SR\toolchain).
+python -m srhd_modkit script build src/Mod_SmartLootServiceV2.rson --scr <RuntimeMod>/DATA/Script/Mod_SmartLootServiceV2.scr --lang src/CrewFragment.txt --overwrite --tools-root <toolchain>
+python make_lang.py            # CFG/Rus и CFG/Eng Lang.dat из CrewLang*.txt с проверкой
 python make_moduleinfo.py
 python prepare_runtime.py      # раскладка DLL, ini, ModuleInfo в папку мода
 ```
