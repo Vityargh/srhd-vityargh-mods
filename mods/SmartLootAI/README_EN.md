@@ -1,69 +1,88 @@
-# SmartLootAI 0.9 (beta) - Vityargh
+# SmartLootAI 0.9 (Beta) — Vityargh
 
-Space gets cleaner: unwanted loot is removed by ordinary ships and a dedicated janitor service.
+Making space a cleaner place: unwanted loot is cleared by regular ships and a dedicated space cleanup service.
 
 ## Installation
 
-1. Close the game.
-2. Unpack the whole archive into the game folder (where Rangers.exe is). If the archiver asks to replace dsound.dll, XenoCore.dll or XenoNative.ini, choose "Skip": you already have the loader.
-3. Start the game, enable SmartLootAI in the "Vityargh Mods" section of the mod list, press Apply.
-4. Fully restart the game.
+1. Close the game completely.
+2. Extract the archive into your game folder (where `Rangers.exe` is located). If your archiver asks whether to overwrite `dsound.dll`, `XenoCore.dll`, or `XenoNative.ini`, choose **Skip**: you already have the loader installed.
+3. Launch the game, find SmartLootAI under **"Vityargh Mods"** in the mod list, enable it, and click **Apply**.
+4. Restart the game completely.
 
-Back up your save before the first launch.
+**Back up your save before launching the mod for the first time.**
 
-## What gets cleaned
+## What Gets Cleaned Up
 
-* Minerals and goods - right away, in any amount.
-* Equipment and weapons pile up: each system keeps up to 50 of them, the cheapest extras go first.
+* **Minerals and trade goods** are removed immediately, regardless of quantity.
+* **Equipment and weapons** are allowed to accumulate up to 50 items per star system. Anything above that limit is removed, starting with the cheapest items.
 
-## Never touched
+## What Is Never Touched
 
-Artifacts, micromodules, dominator nodes, hulls, unknown items from other mods, and quest items worth 10,000 credits or more per weight unit.
+* Artifacts and micromodules.
+* Dominator nodes (standard ones, weighing 30–1000 units).
+* Unrecognized items from other mods.
+* Quest and special items worth at least 10,000 credits per unit of weight.
 
-## Ordinary ships
+## Regular Ships
 
-They shoot junk only with free weapons and only when no enemy is in range. Busy weapons keep fighting, routes don't change, no missiles are wasted on junk. Your own ship is never controlled.
+Regular ships fire at junk only with available weapons and only when no enemies are within those weapons' range. Weapons already engaged in combat continue fighting normally, ship routes remain unchanged, and missiles are never wasted on junk.
 
-## Janitor service
+**The mod does not take control of your ship.**
 
-* SCV-01 "Elbow Grease", SCV-02 "Skate" and SCV-03 "Wishbone".
-* Invulnerable, never fight, drop nothing, infinite fuel.
-* Travel on their own to wherever there is junk, including dominator systems. Never through black holes.
-* Up to 10 in the galaxy, no more than two per system.
-* You can talk to the crew: 34 topics.
+## Space Cleanup Service
 
-New janitors don't appear right away: the service first sweeps the galaxy once.
+* Three ships: SCV-01 **"Elbow Grease"**, SCV-02 **"Skate"**, and SCV-03 **"Wishbone"**.
+* They are invulnerable, never engage in combat, drop no loot, and have unlimited fuel.
+* They automatically travel to systems containing junk, including Dominator-controlled systems. They do not travel through black holes.
+* Up to 10 cleanup ships can operate across the galaxy, with no more than two in any single system.
+* You can talk to their crews, with **34 conversation topics** available.
 
-## Settings
+New cleanup ships do not appear immediately. The service first performs a one-time scan of the galaxy. This is normal.
 
-File `Mods\OtherMods\SmartLootAI\Native\SmartLootAI.XenoPlugin.ini`, section `[SmartLootAI]`, 1 = on, 0 = off. Restart the game after changes.
+## Configuration
 
-| Setting | What it does |
+Configuration file:
+
+`Mods\OtherMods\SmartLootAI\Native\SmartLootAI.XenoPlugin.ini`
+
+Section: `[SmartLootAI]`
+
+Set a value to `1` to enable an option or `0` to disable it. Restart the game after making changes.
+
+| Setting | Description |
 |---|---|
-| `ActiveJunkCleanup` | Ordinary ships clean junk with free weapons |
-| `CleanupMinerals` | Clean up minerals |
-| `CleanupTradeGoods` | Clean up trade goods |
+| `ActiveJunkCleanup` | Allows regular ships to actively clear junk using available weapons |
+| `CleanupMinerals` | Enables mineral cleanup |
+| `CleanupTradeGoods` | Enables trade goods cleanup |
 
-## If it doesn't work
+## Troubleshooting
 
-* **A message says the sanitation service is not running.** The loader is missing or the game version is not supported. Unpack the whole archive into the game folder and restart.
-* **Details** are written to `XenoNative.log` in the game folder. `ACTIVE 0.9` means everything works; `BLOCKED` explains why the mod did not start.
+* **You see the message "cleanup service not started".** The loader is missing or your game version is unsupported. Extract the entire archive into the game folder (`dsound.dll` and `XenoCore.dll` should be next to `Rangers.exe`), then restart the game.
+* **Detailed information** is written to `XenoNative.log` in the game folder. The entry `ACTIVE 0.9` means the mod is running correctly. An entry containing `BLOCKED` explains why the mod could not start.
 
 ## Compatibility
 
-Tested on Space Rangers HD: A War Apart 2.1.2500 (Steam). On other versions the mod switches itself off if the game code differs, and tells you so. Your save is not affected.
+* Tested on **Space Rangers HD: A War Apart 2.1.2500 (Steam)**, the latest game release.
+* On other game versions, the mod automatically disables itself if the game's code differs from the supported version and reports the reason. Your save file will remain unaffected.
+* No conflicts are expected with mods that do not modify loot cleanup or ship behavior.
 
-## Rollback
+## Uninstalling / Rolling Back
 
-Disable the mod and press Apply. The service state already written to a save stays there; for a full rollback use a save made before installing the mod.
+Disable the mod and apply the changes. However, the cleanup service state already stored in your save file will not be removed.
 
-## Plans
+For a complete rollback, restore a save made before installing the mod.
 
-This is an early version, and much of what I have in mind is still ahead:
+## Future Plans
 
-* **A ship of its own for each janitor.** Right now Elbow Grease, Skate and Wishbone fly identical ships. The idea: Elbow Grease is an old, battered industrial collector with containers and manipulators, Skate is modern and compact, Wishbone is a small utility craft.
-* **The Quiet Harbor station.** The service's base: repairs, junk sorting and a tavern for space workers where janitors wait between shifts.
-* **Crew portraits** in conversations.
-* **In-game settings**, no file editing needed.
+This is still an early version, and there's plenty more I want to add:
 
-I build the code and the models together with AI, and I don't have much experience with 3D models for the game yet. Any help is very welcome - models, testing, ideas, translations - and so are your forks.
+* **Unique ships for each cleanup crew.** Right now, Elbow Grease, Skate, and Wishbone all fly identical ships. The plan is to give each one its own design: Elbow Grease will be an old, battered industrial collector with cargo containers and manipulators; Skate will be modern and compact; and Wishbone will be a small utility craft.
+* **The "Quiet Harbor" station.** A home base for the cleanup service, featuring repair facilities, junk sorting, and a space workers' tavern where crews can relax between shifts.
+* **Crew portraits** during conversations.
+* **In-game settings**, without having to edit configuration files.
+
+I'm developing the code and models with AI assistance, and I don't have much experience creating 3D models for games yet.
+
+Any help would be greatly appreciated — whether it's 3D models, testing, ideas, translations, or your own forks of the project.
+
+I also have original sketches from *Planetes* (2003), concept drawings, early 3D models, and character portraits that can serve as references.
