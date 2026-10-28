@@ -7,15 +7,16 @@
 
 ## Что они дают
 
-**SmartLootAI — космос без свалки.**
+**SmartLootAI** — космос без свалки.
+
 К середине партии системы завалены брошенными минералами, товарами и всяким хламом. С этим модом обычные корабли между делом расстреливают мусор свободными орудиями, а по галактике летает служба мусорщиков — «Работяга», «Скат» и «Косточка». Они неуязвимы, ни с кем не воюют и с удовольствием поболтают с вами о нелёгкой жизни космического уборщика. Всё ценное остаётся на месте: артефакты, микромодули, ноды, корпуса, квестовые вещи и предметы из других модов не трогаются никогда.
-
-**ApplyCrashFix — прощайте, вылеты после «Применить».**
+====================================================================
+**ApplyCrashFix** — прощайте, вылеты после «Применить».
 Включили мод, нажали «Применить» в списке модов — и игра падала. Больше не падает.
-
-**BureauAffordableDesign — своё КБ по карману.**
+====================================================================
+**BureauAffordableDesign** — своё КБ по карману.
 Проекты собственных корпусов, оружия и оборудования в конструкторском бюро стоят в 10 раз меньше кредитов. Ресурсы и сроки разработки прежние.
-
+====================================================================
 > ⚠️⚠️⚠️ Это тестовая версия: моды прошли автоматические проверки, но в долгой игре пока обкатываются. Сделайте копию сохранения перед установкой — и, пожалуйста, расскажите, если что-то пойдёт не так ⚠️⚠️⚠️
 
 | Мод | Версия | Нужен загрузчик | Подробнее |
@@ -79,16 +80,16 @@ Hi to everyone still flying in Space Rangers!
 I made a few small mods that I personally missed in the game. Sharing them in case you find them useful too.
 
 ## What they do
-
-**SmartLootAI — space without the landfill.**
+====================================================================
+**SmartLootAI** — space without the landfill.
 By mid-game, star systems are buried in abandoned minerals, goods and all sorts of junk. With this mod, ordinary ships clear it with their free weapons, and a janitor service roams the galaxy: Elbow Grease, Skate and Wishbone. They're invulnerable, never fight anyone, and are always happy to chat about the hard life of a space janitor. Everything valuable stays put: artifacts, micromodules, nodes, hulls, quest items and items from other mods are never touched.
-
-**ApplyCrashFix — goodbye, crashes after Apply.**
+====================================================================
+**ApplyCrashFix** — goodbye, crashes after Apply.
 Enabling a mod and pressing Apply in the mod list used to crash the game. Not anymore.
-
-**BureauAffordableDesign — a design bureau you can afford.**
+====================================================================
+**BureauAffordableDesign** — a design bureau you can afford.
 Your own hull, weapon and equipment projects cost 10 times fewer credits. Resources and development time stay the same.
-
+====================================================================
 > ⚠️⚠️⚠️ This is a test release: the mods passed automated checks but are still being played through. Back up your save before installing, and please let me know if something goes wrong ⚠️⚠️⚠️
 
 | Mod | Version | Needs the loader | Details |
