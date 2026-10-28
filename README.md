@@ -62,7 +62,7 @@
 
 ## Как установить
 
-Скачивайте готовые архивы со страницы **[Releases](../../releases)**, а не кнопкой «Code»: в архивах уже лежит всё нужное, включая загрузчик.
+Скачивайте готовые архивы со страницы **[Releases](../../releases)**, а не кнопкой «Code». Архив SmartLootAI + ApplyCrashFix уже содержит загрузчик XenoNativeLoader. Для BureauAffordableDesign загрузчик не нужен, но требуется отдельный мод `Cat_DesignDepartment`.
 
 1. Закройте игру.
 2. Распакуйте архив целиком в папку игры — туда, где лежит `Rangers.exe`.  
@@ -147,7 +147,7 @@ Your own hull, weapon and equipment projects cost 10 times fewer credits. Resour
 
 ## Installation
 
-Download the ready-made archives from **[Releases](../../releases)**, not with the "Code" button: the archives already contain everything you need, including the loader.
+Download the ready-made archives from **[Releases](../../releases)**, not with the "Code" button. The SmartLootAI + ApplyCrashFix archive includes XenoNativeLoader. BureauAffordableDesign does not need the loader, but requires the separate `Cat_DesignDepartment` mod.
 
 1. Close the game.
 2. Unpack the whole archive into the game folder, where `Rangers.exe` is.  
