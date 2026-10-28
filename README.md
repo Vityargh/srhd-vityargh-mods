@@ -9,8 +9,34 @@
 
 **SmartLootAI** (предрелиз, нужен 3D моделер) — космос без свалки. И с ценной оборудкой, хе-хе.
 
+<a id="smartlootai-gallery"></a>
+
+<p align="center">
+<a href="assets/smartloot/gallery/concept-kostochka.webp"><img src="assets/smartloot/gallery/concept-kostochka.webp" width="345" alt="Концепт SCV-03 Косточка"></a> 
+<a href="assets/smartloot/gallery/concept-quiet-harbor.webp"><img src="assets/smartloot/gallery/concept-quiet-harbor.webp" width="345" alt="Концепт станции SST-04 Тихая гавань"></a>
+</p>
+<p align="center"><sub>Концепты «Косточки» и станции «Тихая гавань». Пока это проекты, а не готовые игровые модели.</sub></p>
+
 К середине партии системы завалены брошенными минералами, товарами и всяким хламом. С этим модом обычные корабли между делом расстреливают мусор свободными орудиями, а по галактике летает служба мусорщиков — «Работяга», «Скат» и «Косточка». Они неуязвимы, ни с кем не воюют и с удовольствием поболтают с вами о нелёгкой жизни космического уборщика. 
 (!) Всё ценное остаётся на месте: артефакты, микромодули и ноды не трогаются никогда, квестовые и особые вещи — если стоят от 10 000 кредитов за единицу веса, а незнакомые игре предметы из других модов — всегда.
+
+**Первые 3D-модели**
+
+<p align="center">
+<a href="assets/smartloot/gallery/model-kostochka.webp"><img src="assets/smartloot/gallery/model-kostochka.webp" width="345" alt="3D-модель SCV-03 Косточка"></a> 
+<a href="assets/smartloot/gallery/model-quiet-harbor.webp"><img src="assets/smartloot/gallery/model-quiet-harbor.webp" width="345" alt="3D-модель станции Тихая гавань"></a>
+</p>
+<p align="center"><sub>Предварительные 3D-модели. В текущем релизе ещё не используются.</sub></p>
+
+**Портреты экипажа (концепты)**
+
+<p align="center">
+<a href="assets/smartloot/gallery/portrait-hachimaki.webp"><img src="assets/smartloot/gallery/portrait-hachimaki.webp" width="125" alt="Хатимаки Хосино"></a> 
+<a href="assets/smartloot/gallery/portrait-ai.webp"><img src="assets/smartloot/gallery/portrait-ai.webp" width="125" alt="Ай Танабэ"></a> 
+<a href="assets/smartloot/gallery/portrait-yuri.webp"><img src="assets/smartloot/gallery/portrait-yuri.webp" width="125" alt="Юрий Михалков"></a> 
+<a href="assets/smartloot/gallery/portrait-fee.webp"><img src="assets/smartloot/gallery/portrait-fee.webp" width="125" alt="Фи Кармайкл"></a>
+</p>
+<p align="center"><sub>Хатимаки · Ай · Юрий · Фи</sub></p>
 
 ---
 
@@ -91,6 +117,8 @@ I made a few small mods that I personally missed in the game. Sharing them in ca
 ## What they do
 
 **SmartLootAI** (pre-realease, looking for 3D disigner) — space without the landfill. And with valuable equipment, hehe.
+
+[Concept art, early 3D previews and crew portraits](#smartlootai-gallery) (work in progress).
 
 By mid-game, star systems are buried in abandoned minerals, goods and all sorts of junk. With this mod, ordinary ships clear it with their free weapons, and a janitor service roams the galaxy: Elbow Grease, Skate and Wishbone. They're invulnerable, never fight anyone, and are always happy to chat about the hard life of a space janitor. 
 (!) Everything valuable stays put: artifacts, micromodules and nodes are never touched, quest and special items are kept if worth 10,000 credits or more per unit of weight, and items from other mods with types unknown to the game are always kept.
