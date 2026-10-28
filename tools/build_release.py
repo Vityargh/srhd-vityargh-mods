@@ -60,7 +60,6 @@ def main():
               ('ПРОЧТИ.txt', text((SR / 'release' / 'PROCHTI.txt').read_text(encoding='utf-8')))]
     bundle += list(tree(sl, 'Mods/OtherMods/SmartLootAI'))
     bundle += list(tree(acf, 'Mods/OtherMods/ApplyCrashFix'))
-    # ApplyCrashFix sources live in the public repo (src/ApplyCrashFix); no separate submission archive.
     report = [write('Vityargh-SmartLootAI-0.9-ApplyCrashFix-1.0.zip', bundle),
               write('Vityargh-BureauAffordableDesign-1.0.zip', list(tree(bad, 'Mods/OtherMods/BureauAffordableDesign')))]
     (OUT / 'release-manifest.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')

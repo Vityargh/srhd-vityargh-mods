@@ -74,5 +74,5 @@
   "SCV01": "SCV-01 Elbow Grease",
   "SCV02": "SCV-02 Skate",
   "SCV03": "SCV-03 Wishbone",
-  "NoLoader": "SmartLootAI: the sanitation service is not running.<br><br>The native part of the mod did not load. Usually this means XenoNativeLoader is not installed: dsound.dll and XenoCore.dll from the mod archive must sit next to Rangers.exe. Less often the game version is not supported, or another native mod has already changed the same parts of the game.<br><br>Janitors and smart cleanup are off; your save is safe. Unpack the whole mod archive into the game folder and restart the game. Details are in XenoNative.log in the game folder."
+  "NoLoader": "SmartLootAI: cleanup service not started.<br><br>The native part of the mod did not load. Usually this means XenoNativeLoader is not installed: dsound.dll and XenoCore.dll from the mod archive must sit next to Rangers.exe. Less often the game version is not supported, or another native mod has already changed the same parts of the game.<br><br>Janitors and smart cleanup are off; your save is safe. Unpack the whole mod archive into the game folder and restart the game. Details are in XenoNative.log in the game folder."
 }
