@@ -54,7 +54,7 @@
 
 > ⚠️ **Это тестовая версия:** моды прошли автоматические проверки, но в долгой игре пока обкатываются. Сделайте копию сохранения перед установкой — и, пожалуйста, расскажите, если что-то пойдёт не так.
 
-| Мод | Версия | Нужен загрузчик | Подробнее |
+| Мод | Версия | Нужен загрузчик Xeno | Подробнее |
 | --- | --- | --- | --- |
 | SmartLootAI | 0.10 (бета) | Да | [README](mods/SmartLootAI/README_RU.md) |
 | ApplyCrashFix | 1.0 | Да | [README](mods/ApplyCrashFix/README_RU.md) |
@@ -139,7 +139,7 @@ Your own hull, weapon and equipment projects cost 10 times fewer credits. Resour
 
 > ⚠️ **This is a test release:** the mods passed automated checks but are still being played through. Back up your save before installing, and please let me know if something goes wrong.
 
-| Mod | Version | Needs the loader | Details |
+| Mod | Version | Needs the Xeno loader | Details |
 | --- | --- | --- | --- |
 | SmartLootAI | 0.10 (beta) | Yes | [README](mods/SmartLootAI/README_EN.md) |
 | ApplyCrashFix | 1.0 | Yes | [README](mods/ApplyCrashFix/README_EN.md) |
