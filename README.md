@@ -4,7 +4,7 @@
 
 | Мод | Версия | Что делает | Нужен загрузчик |
 |---|---|---|---|
-| [SmartLootAI](mods/SmartLootAI/README_RU.md) | 2.0.1 | Уборка лишнего лута и служба мусорщиков | да |
+| [SmartLootAI](mods/SmartLootAI/README_RU.md) ([EN](mods/SmartLootAI/README_EN.md)) | 2.0.1 | Уборка лишнего лута и служба мусорщиков, RU/EN | да |
 | [ApplyCrashFix](mods/ApplyCrashFix/README_RU.md) | 1.0 | Игра не вылетает после кнопки «Применить» в списке модов | да |
 | [BureauAffordableDesign](mods/BureauAffordableDesign/README_RU.md) | 1.0 | Проекты в конструкторском бюро в 10 раз дешевле по кредитам | нет |
 

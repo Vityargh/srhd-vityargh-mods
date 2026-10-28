@@ -6,7 +6,7 @@ Dependence=
 Priority=100
 Section=Моды Vityargh
 SectionEng=Vityargh Mods
-Languages=Rus
+Languages=Rus,Eng
 SmallDescription=Версия 2.0.1. Служба мусорщиков и уборка лишнего лута в космосе.
 FullDescription=<color=0,80,170>Версия 2.0.1</color><br>
 FullDescription=- Космос становится чище: лишний лут убирают обычные корабли и отдельная служба мусорщиков.<br>
@@ -33,7 +33,7 @@ FullDescriptionEng=<color=0,80,170>What stays</color><br>
 FullDescriptionEng=- Artifacts, micromodules, nodes and unknown items from other mods are never touched. Quest items stay if they are worth 10,000 credits or more per weight unit.<br>
 FullDescriptionEng=<br><br>
 FullDescriptionEng=<color=0,80,170>Ships and janitors</color><br>
-FullDescriptionEng=- Ships fire at junk only with free weapons and never leave a fight for it. Janitors Rabotyaga, Skat and Kostochka are invulnerable, never fight and travel between systems on their own. You can talk to them.<br>
+FullDescriptionEng=- Ships fire at junk only with free weapons and never leave a fight for it. Janitors Elbow Grease, Skate and Wishbone are invulnerable, never fight and travel between systems on their own. You can talk to them.<br>
 FullDescriptionEng=<br><br>
 FullDescriptionEng=<color=0,80,170>Getting started</color><br>
 FullDescriptionEng=- Unpack the whole archive into the game folder, enable the mod, apply the changes and fully restart the game. The required XenoNativeLoader is already included. Back up your save before the first launch.<br>

@@ -88,4 +88,14 @@ for key,text in [('SCV01','SCV-01 Работяга'),('SCV02','SCV-02 Скат')
 (ROOT/'src'/f'{script}.rson').write_text(json.dumps(p,ensure_ascii=False,indent=2),encoding='utf-8')
 (ROOT/'RuntimeMod/CFG/Rus').mkdir(parents=True,exist_ok=True)
 lang.save(ROOT/'src/CrewLang.txt',encoding='cp1251')
+# English: same keys, texts from src/crew_eng.json (SR2-style localized names).
+ru_node=lang.find_node('Script/'+script)
+ru_keys=[p.key for p in ru_node.parameters]
+eng=json.loads((ROOT/'src/crew_eng.json').read_text(encoding='utf-8'))
+assert set(eng)==set(ru_keys),('eng keys mismatch',sorted(set(ru_keys)^set(eng)))
+bad=[k for k,v in eng.items() if any(ord(c)>127 for c in v)]
+assert not bad,('non-ASCII in English text',bad)
+lang_en=parse_blockpar('Script ^{\n}\n')
+for k in ru_keys:lang_en.ensure_node('Script/'+script).set_parameter(k,eng[k],create=True)
+lang_en.save(ROOT/'src/CrewLang_Eng.txt',encoding='cp1251')
 print(f'Generated {len(topics)} topics plus goodbye, 36 answers, localized RSON; station-only lines excluded.')
