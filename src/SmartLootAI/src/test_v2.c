@@ -1,4 +1,8 @@
-#define main historical_test_main
+/* test_policy.c is the 1.x suite. It is included here ONLY for its fixtures (fake game objects, reset(),
+   stubbed game calls). Its own main() checks 1.x rules that 2.x changed on purpose (any nearby enemy
+   blocked all guns; artifacts and unknown types were cleanable), so it is renamed and never run.
+   The current rules are asserted below. */
+#define main historical_1x_main_not_run
 #include "test_policy.c"
 #undef main
 static int has(void *ship,void *item) {
@@ -32,6 +36,9 @@ int main(void) {
     afterAssign(testShip);assert(target()==itemData[0] && !PTR(otherWeapon,0x70));
     PTR(testWeapon,0x70)=0;FLOAT(testOther,0x14)=200;afterAssign(testShip);assert(!target());
     FLOAT(testOther,0x14)=401;afterAssign(testShip);assert(target() && PTR(otherWeapon,0x70));
-    puts("PASS v2 core: explicit unknown protection; 34 artifacts and micromodules; quest price boundary; nodes 29/30/1000/1001; equipment 49/50/51/60 and cheapest excess; normal/janitor barrels; independent gun ranges.");
+    /* ActiveJunkCleanup=0: the mod must leave existing item targets (stock AI or other mods' scripts) alone. */
+    reset(1);BYTE(itemData[0],0xc)=4;activeJunkCleanup=0;PTR(testWeapon,0x70)=itemData[0];
+    afterAssign(testShip);assert(target()==itemData[0]);activeJunkCleanup=1;
+    puts("PASS v2 core: cleanup-off keeps foreign item targets; explicit unknown protection; 34 artifacts and micromodules; quest price boundary; nodes 29/30/1000/1001; equipment 49/50/51/60 and cheapest excess; normal/janitor barrels; independent gun ranges.");
     return 0;
 }

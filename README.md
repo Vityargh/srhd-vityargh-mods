@@ -10,7 +10,7 @@
 **SmartLootAI** — космос без свалки.
 
 К середине партии системы завалены брошенными минералами, товарами и всяким хламом. С этим модом обычные корабли между делом расстреливают мусор свободными орудиями, а по галактике летает служба мусорщиков — «Работяга», «Скат» и «Косточка». Они неуязвимы, ни с кем не воюют и с удовольствием поболтают с вами о нелёгкой жизни космического уборщика. 
-(!) Всё ценное остаётся на месте: артефакты, микромодули, ноды, квестовые вещи и предметы из других модов не трогаются никогда.
+(!) Всё ценное остаётся на месте: артефакты, микромодули и ноды не трогаются никогда, квестовые и особые вещи — если стоят от 10 000 кредитов за единицу веса, а незнакомые игре предметы из других модов — всегда.
 
 ---
 
@@ -93,7 +93,7 @@ I made a few small mods that I personally missed in the game. Sharing them in ca
 **SmartLootAI** — space without the landfill.
 
 By mid-game, star systems are buried in abandoned minerals, goods and all sorts of junk. With this mod, ordinary ships clear it with their free weapons, and a janitor service roams the galaxy: Elbow Grease, Skate and Wishbone. They're invulnerable, never fight anyone, and are always happy to chat about the hard life of a space janitor. 
-(!) Everything valuable stays put: artifacts, micromodules, nodes, quest items and items from other mods are never touched.
+(!) Everything valuable stays put: artifacts, micromodules and nodes are never touched, quest and special items are kept if worth 10,000 credits or more per unit of weight, and items from other mods with types unknown to the game are always kept.
 
 ---
 

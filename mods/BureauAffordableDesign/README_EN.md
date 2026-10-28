@@ -1,6 +1,7 @@
 Design Bureau: affordable design
 
 Credit cost of NEW hull, weapon and equipment projects / 10.
+Russian game language only: the required Cat_DesignDepartment mod exists only in Russian.
 Resources, development time, blueprints, the shop and membership fees do not change.
 Projects already ordered keep their old debt.
 

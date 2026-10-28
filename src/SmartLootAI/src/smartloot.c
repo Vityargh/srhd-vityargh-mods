@@ -164,12 +164,13 @@ static void __cdecl afterAssign(void *ship) {
     if(ship==(void*)player(0,0) || !(star=PTR(ship,0x24)) || !inSpace(ship,0)) return;
     count=BYTE(ship,0x12c); if(count<1 || count>5) return;
     items=PTR(star,0x30); n=listCount(items); if(n<1 || n>100000) return;
-    /* Fail closed if explicit script targets survived the stock routine. */
+    /* With cleanup enabled the mod owns item targeting: non-asteroid item targets left from the stock
+       routine are dropped and re-chosen below by the policy. With cleanup disabled, targets are untouched. */
     for(j=0;j<count;++j) {
         void *target;
         weapons[j]=PTR(ship,0x118+j*4); if(!weapons[j]) return;
         target=PTR(weapons[j],0x70);
-        if(target) for(i=0;i<n;++i) if(listAt(items,i)==target && BYTE(target,0xc)!=42) { PTR(weapons[j],0x70)=0; break; }
+        if(activeJunkCleanup && target) for(i=0;i<n;++i) if(listAt(items,i)==target && BYTE(target,0xc)!=42) { PTR(weapons[j],0x70)=0; break; }
         target=PTR(weapons[j],0x70);
         if(target && !contains(PTR(star,0x28),target)) realTarget=1;
     }

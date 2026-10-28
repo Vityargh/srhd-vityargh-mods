@@ -13,14 +13,14 @@ Making space a cleaner place: unwanted loot is cleared by regular ships and a de
 
 ## What Gets Cleaned Up
 
-* **Minerals and trade goods** are removed immediately, regardless of quantity.
+* **Minerals and trade goods** have no limit: they are removed as soon as a ship gets to them.
 * **Equipment and weapons** are allowed to accumulate up to 50 items per star system. Anything above that limit is removed, starting with the cheapest items.
 
 ## What Is Never Touched
 
 * Artifacts and micromodules.
 * Dominator nodes (standard ones, weighing 30–1000 units).
-* Unrecognized items from other mods.
+* Items from other mods that have their own type unknown to the game. If another mod creates an item of a regular type (trade goods, equipment), it is cleaned up like a regular one.
 * Quest and special items worth at least 10,000 credits per unit of weight.
 
 ## Regular Ships
@@ -51,7 +51,7 @@ Set a value to `1` to enable an option or `0` to disable it. Restart the game af
 
 | Setting | Description |
 |---|---|
-| `ActiveJunkCleanup` | Allows regular ships to actively clear junk using available weapons |
+| `ActiveJunkCleanup` | Cleanup as a whole: 0 turns off both regular ships and the cleanup service |
 | `CleanupMinerals` | Enables mineral cleanup |
 | `CleanupTradeGoods` | Enables trade goods cleanup |
 
@@ -64,7 +64,7 @@ Set a value to `1` to enable an option or `0` to disable it. Restart the game af
 
 * Tested on **Space Rangers HD: A War Apart 2.1.2500 (Steam)**, the latest game release.
 * On other game versions, the mod automatically disables itself if the game's code differs from the supported version and reports the reason. Your save file will remain unaffected.
-* No conflicts are expected with mods that do not modify loot cleanup or ship behavior.
+* No conflicts are expected with mods that do not modify loot cleanup or ship behavior. While cleanup is on, the mod decides which items in space ships shoot at; if another mod's script orders a ship to shoot an item, that order may be replaced.
 
 ## Uninstalling / Rolling Back
 

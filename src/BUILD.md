@@ -19,7 +19,7 @@ cd src/SmartLootAI
 python src/build.py            # prepare.py (сигнатуры из Rangers.exe) + DLL через tcc
 python run_checks.py           # 6 наборов x86-тестов
 python generate_dialogue.py    # RSON скрипта службы + CrewLang.txt
-python -m srhd_modkit script build src/Mod_SmartLootServiceV2.rson --scr <RuntimeMod>/DATA/Script/Mod_SmartLootServiceV2.scr --lang src/CrewFragment.txt --overwrite --tools-root <toolchain>
+python -m srhd_modkit script build src/Mod_SmartLootServiceV2.rson --scr <RuntimeMod>/DATA/Script/Mod_SmartLootServiceV2.scr --lang src/CrewFragment.txt  # (CrewFragment.txt создаёт эта команда) --overwrite --tools-root <toolchain>
 python make_lang.py            # Lang.dat из CrewLang.txt с проверкой
 python make_moduleinfo.py
 python prepare_runtime.py      # раскладка DLL, ini, ModuleInfo в папку мода

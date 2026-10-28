@@ -15,7 +15,7 @@ It keeps the planetary battles engine from being unloaded until the game closes.
 - The code of the game and of other mods is not changed.
 - Saves are not affected.
 - Works with any set of mods.
-- Memory use does not grow: the engine is loaded at the first planetary battle anyway.
+- The planetary battles engine (about 1.5 MB) stays in memory until you quit the game, even if there are no more planetary battles.
 
 ## Installation
 

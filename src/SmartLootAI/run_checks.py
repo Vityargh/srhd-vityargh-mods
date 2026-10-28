@@ -3,6 +3,7 @@ import subprocess,sys,json,hashlib,time
 r=Path(__file__).parent
 tcc=Path(r'S:\SR\toolchain\tcc\tcc.exe')
 cases=[('core','src/test_v2.c'),('fire-guard','src/test_fire_guard.c'),('service-api','src/test_service_api.c'),('native-gates','src/test_native_gates.c'),('fleet-registry','tests/test_fleet_registry.c'),('service-primitives','tests/test_service_policy.c')]
+(r/'evidence').mkdir(exist_ok=True)
 results=[]
 for name,src in cases:
  out=r/'tests'/('check-'+name+'.exe')
