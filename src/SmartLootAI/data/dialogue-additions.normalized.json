@@ -1,0 +1,198 @@
+{
+  "status": "specification_only_not_game_runtime",
+  "source_fragment_complete": false,
+  "existing_repeated": [
+    {
+      "id": "orig_14",
+      "phase": "now_keep",
+      "player": "Передайте привет экипажу",
+      "npc": "Передам. Только тихо: у нас один наконец уснул.",
+      "speaker": "any"
+    },
+    {
+      "id": "orig_15",
+      "phase": "now_keep",
+      "player": "Удачной смены",
+      "npc": "И тебе чистой орбиты.",
+      "speaker": "any"
+    }
+  ],
+  "ship_dialogue_additions": [
+    {
+      "id": "new_01",
+      "phase": "now_optional",
+      "player": "Это у вас оружие?",
+      "npc": "По документам — промышленный инструмент. По следам на обшивке — веский аргумент.",
+      "speaker_role": "engineer",
+      "tag": "work"
+    },
+    {
+      "id": "new_02",
+      "phase": "now_optional",
+      "player": "Кто вас финансирует?",
+      "npc": "Те же, кто просит работать быстрее и оплачивает только половину расходников.",
+      "speaker_role": "captain",
+      "tag": "bureaucracy"
+    },
+    {
+      "id": "new_03",
+      "phase": "now_optional",
+      "player": "Что в контейнере?",
+      "npc": "По накладной — металлолом. По запаху — подробности лучше не узнавать.",
+      "speaker_role": "technician",
+      "tag": "work"
+    },
+    {
+      "id": "new_04",
+      "phase": "now_optional",
+      "player": "У вас бывает выходной?",
+      "npc": "Да. Он случается, когда бухгалтерия забывает, что мы существуем.",
+      "speaker_role": "veteran",
+      "tag": "routine"
+    },
+    {
+      "id": "new_05",
+      "phase": "now_optional",
+      "player": "Вы видели что-то красивое?",
+      "npc": "Однажды нашли солнечный парус. Целый. На минуту даже стало жалко его разбирать.",
+      "speaker_role": "pilot",
+      "tag": "memories"
+    },
+    {
+      "id": "new_06",
+      "phase": "now_optional",
+      "player": "Кто придумал вашу эмблему?",
+      "npc": "Человек с хорошим чувством юмора и очень маленьким бюджетом.",
+      "speaker_role": "captain",
+      "tag": "work"
+    },
+    {
+      "id": "new_07",
+      "phase": "now_optional",
+      "player": "Как тут со связью?",
+      "npc": "Сигнал хороший. Начальство поэтому знает, что мы до сих пор не на базе.",
+      "speaker_role": "engineer",
+      "tag": "routine"
+    },
+    {
+      "id": "new_08",
+      "phase": "now_optional",
+      "player": "Откуда берётся столько хлама?",
+      "npc": "В космосе вещи не исчезают. Особенно те, за которые никто не отвечает.",
+      "speaker_role": "veteran",
+      "tag": "work"
+    },
+    {
+      "id": "new_09",
+      "phase": "now_optional",
+      "player": "Много летаете?",
+      "npc": "Достаточно, чтобы понимать: все карты галактики одинаково врут про спокойные маршруты.",
+      "speaker_role": "pilot",
+      "tag": "travel"
+    },
+    {
+      "id": "new_10",
+      "phase": "now_optional",
+      "player": "Почему вы не берёте дорогие находки?",
+      "npc": "Мы специалисты по отходам, а не охотники за чужими сокровищами. Разницу обычно видят по счёту.",
+      "speaker_role": "captain",
+      "tag": "rules"
+    },
+    {
+      "id": "new_11",
+      "phase": "now_optional",
+      "player": "Какой у вас самый нужный инструмент?",
+      "npc": "Не резак. Термокружка, которая пережила четыре корабля.",
+      "speaker_role": "technician",
+      "tag": "routine"
+    },
+    {
+      "id": "new_12",
+      "phase": "now_optional",
+      "player": "А если мусора больше, чем вас?",
+      "npc": "Будем возвращаться. Вселенная тоже не торопится на уборку.",
+      "speaker_role": "veteran",
+      "tag": "work"
+    },
+    {
+      "id": "new_13",
+      "phase": "now_optional",
+      "player": "Вы тут надолго?",
+      "npc": "Пока есть работа. Или пока диспетчер не вспомнит, что у нас кончилась смена.",
+      "speaker_role": "pilot",
+      "tag": "schedule"
+    },
+    {
+      "id": "new_14",
+      "phase": "now_optional",
+      "player": "Здесь безопасно?",
+      "npc": "Мы бы сказали «да», но суеверия у нас прописаны в технике безопасности.",
+      "speaker_role": "captain",
+      "tag": "danger"
+    },
+    {
+      "id": "new_15",
+      "phase": "now_optional",
+      "player": "Давно работаете вместе?",
+      "npc": "Достаточно, чтобы узнавать неисправность корабля по тому, кто первым начинает ругаться.",
+      "speaker_role": "engineer",
+      "tag": "crew"
+    },
+    {
+      "id": "new_16",
+      "phase": "now_optional",
+      "player": "Как настроение?",
+      "npc": "Спокойное. Это настораживает: обычно перед поломкой у нас тоже всё спокойно.",
+      "speaker_role": "technician",
+      "tag": "humor"
+    },
+    {
+      "id": "new_17",
+      "phase": "now_optional",
+      "player": "Что это за царапины на борту?",
+      "npc": "Космический мусор. И один очень уверенный в себе пилот. Он просил не уточнять порядок.",
+      "speaker_role": "veteran",
+      "tag": "ship"
+    },
+    {
+      "id": "new_18",
+      "phase": "now_optional",
+      "player": "Что делаете во время ожидания?",
+      "npc": "Слушаем корпус. У каждой станции своя музыка; у нашей — вечно не тот подшипник.",
+      "speaker_role": "engineer",
+      "tag": "idle"
+    },
+    {
+      "id": "new_19",
+      "phase": "now_optional",
+      "player": "Что самое трудное в работе?",
+      "npc": "Убедить людей, что предотвращённая катастрофа — тоже результат.",
+      "speaker_role": "captain",
+      "tag": "philosophy"
+    },
+    {
+      "id": "new_20",
+      "phase": "now_optional",
+      "player": "Почему не бросите всё?",
+      "npc": "Видишь эту пустоту? Мы помним, что в ней летают люди.",
+      "speaker_role": "pilot",
+      "tag": "philosophy"
+    }
+  ],
+  "station_future_not_implemented": [
+    {
+      "id": "st_01",
+      "phase": "station_future_not_implemented",
+      "player": "Можно пристыковаться?",
+      "npc": "Заходи. Третий шлюз свободен. Только не оставляй за собой топливные баки.",
+      "tag": "docking"
+    },
+    {
+      "id": "st_02",
+      "phase": "station_future_not_implemented",
+      "player": "Тут можно передохнуть?",
+      "npc": "Конечно. Здесь разрешается не спасать галактику хотя бы до конца кружки.",
+      "tag": "tavern"
+    }
+  ]
+}

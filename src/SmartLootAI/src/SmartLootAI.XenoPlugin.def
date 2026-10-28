@@ -1,0 +1,12 @@
+LIBRARY SmartLootAI.XenoPlugin.dll
+
+EXPORTS
+SL_Clean
+SL_CountWork
+SL_Edge
+SL_Move
+SL_Prepare
+SL_Ready
+SL_Target
+_XenoPlugin_Initialize@4
+_XenoPlugin_Query@4

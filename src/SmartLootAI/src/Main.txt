@@ -1,0 +1,18 @@
+Data ^{
+ Script ^{
+ Mod_SmartLootServiceV2=1,Script.Mod_SmartLootServiceV2
+ }
+ ScriptLibs ^{
+ Mod_SmartLootServiceV2=SmartLootService
+ SmartLootService ^{
+ Path=Mods\OtherMods\SmartLootAI\Native\SmartLootAI.XenoPlugin.dll
+ SL_Ready=int,SL_Ready
+ SL_CountWork=int,SL_CountWork,dword
+ SL_Target=dword,SL_Target,dword
+ SL_Edge=int,SL_Edge,dword
+ SL_Prepare=int,SL_Prepare,dword
+ SL_Clean=int,SL_Clean,dword,int
+ SL_Move=int,SL_Move,dword
+ }
+ }
+}

@@ -1,0 +1,19 @@
+Name=BureauAffordableDesign
+Author=Vityargh
+Dependence=Cat_DesignDepartment
+Priority=100
+Section=Моды Vityargh
+SectionEng=Vityargh Mods
+Languages=Rus
+SmallDescription=Свои корабли и оборудование - по более доступной цене.
+FullDescription=<color=0,80,170>Доступное проектирование</color><br>
+FullDescription=- Создавайте корпуса, оружие и оборудование в Конструкторском бюро примерно в 10 раз дешевле по кредитам.<br>
+FullDescription=<br><br>
+FullDescription=<color=0,80,170>Что меняется</color><br>
+FullDescription=- Снижается только кредитная цена новых проектов. Ресурсы и сроки разработки остаются прежними. Уже оформленные проекты сохраняют старую стоимость.<br>
+FullDescription=<br><br>
+FullDescription=<color=0,80,170>Исправление вылета</color><br>
+FullDescription=- Включён фикс вылета КБ из-за отсутствующей служебной метки корабля.<br>
+FullDescription=<br><br>
+FullDescription=<color=0,80,170>Как включить</color><br>
+FullDescription=- Включите вместе с модом Конструкторское бюро, примените изменения и полностью перезапустите игру.<br>

@@ -1,0 +1,646 @@
+DesignDepartmentModList ^{
+    CreateEquipment ^{
+        Hull ^{
+            MM ^{
+                Cost ^{
+                    1 ^{
+                        Credits=500000
+                    }
+                }
+            }
+            Race ^{
+                Cost ^{
+                    0 ^{
+                        Credits=5000
+                    }
+                    1 ^{
+                        Credits=10000
+                    }
+                    2 ^{
+                        Credits=15000
+                    }
+                    3 ^{
+                        Credits=20000
+                    }
+                    4 ^{
+                        Credits=25000
+                    }
+                    5 ^{
+                        Credits=250000
+                    }
+                    6 ^{
+                        Credits=500000
+                    }
+                    7 ^{
+                        Credits=15000
+                    }
+                }
+            }
+            Size ^{
+                Cost ^{
+                    All ^{
+                        Credits=5000
+                    }
+                }
+            }
+            SuspectibilityE ^{
+                Cost ^{
+                    All ^{
+                        Credits=11000
+                    }
+                }
+            }
+            SuspectibilityS ^{
+                Cost ^{
+                    All ^{
+                        Credits=11000
+                    }
+                }
+            }
+            SuspectibilityM ^{
+                Cost ^{
+                    All ^{
+                        Credits=11000
+                    }
+                }
+            }
+            Type ^{
+                Cost ^{
+                    0 ^{
+                        Credits=150000
+                    }
+                    1 ^{
+                        Credits=150000
+                    }
+                }
+            }
+            bonHull ^{
+                Cost ^{
+                    All ^{
+                        Credits=10000
+                    }
+                }
+            }
+            bonMass ^{
+                Cost ^{
+                    All ^{
+                        Credits=50000
+                    }
+                }
+            }
+            bonResistAsteroid ^{
+                Cost ^{
+                    All ^{
+                        Credits=5000
+                    }
+                }
+            }
+            bonSkill1 ^{
+                Cost ^{
+                    All ^{
+                        Credits=5000
+                    }
+                }
+            }
+            bonSkill2 ^{
+                Cost ^{
+                    All ^{
+                        Credits=5000
+                    }
+                }
+            }
+            bonSkill3 ^{
+                Cost ^{
+                    All ^{
+                        Credits=5000
+                    }
+                }
+            }
+            bonSlotWeapon ^{
+                Cost ^{
+                    All ^{
+                        Credits=12500
+                    }
+                }
+            }
+            bonSlotArt ^{
+                Cost ^{
+                    All ^{
+                        Credits=12500
+                    }
+                }
+            }
+            bonSlotDef ^{
+                Cost ^{
+                    1 ^{
+                        Credits=25000
+                    }
+                }
+            }
+            bonSlotDroid ^{
+                Cost ^{
+                    1 ^{
+                        Credits=12500
+                    }
+                }
+            }
+            bonSlotForsage ^{
+                Cost ^{
+                    1 ^{
+                        Credits=25000
+                    }
+                }
+            }
+            bonSlotHook ^{
+                Cost ^{
+                    1 ^{
+                        Credits=3000
+                    }
+                }
+            }
+            bonSlotRadar ^{
+                Cost ^{
+                    1 ^{
+                        Credits=7500
+                    }
+                }
+            }
+            bonSlotScaner ^{
+                Cost ^{
+                    1 ^{
+                        Credits=1500
+                    }
+                }
+            }
+        }
+        Weapon ^{
+            ABType ^{
+                Cost ^{
+                    1 ^{
+                        Credits=-1000
+                    }
+                    10 ^{
+                        Credits=8000
+                    }
+                    11 ^{
+                        Credits=100000
+                    }
+                    12 ^{
+                        Credits=6000
+                    }
+                    13 ^{
+                        Credits=7000
+                    }
+                    14 ^{
+                        Credits=15000
+                    }
+                    15 ^{
+                        Credits=17500
+                    }
+                    16 ^{
+                        Credits=20000
+                    }
+                    17 ^{
+                        Credits=2000
+                    }
+                    18 ^{
+                        Credits=7500
+                    }
+                    2 ^{
+                        Credits=500
+                    }
+                    3 ^{
+                        Credits=1000
+                    }
+                    4 ^{
+                        Credits=3000
+                    }
+                    5 ^{
+                        Credits=-5000
+                    }
+                    7 ^{
+                        Credits=2500
+                    }
+                    8 ^{
+                        Credits=1000
+                    }
+                    9 ^{
+                        Credits=3500
+                    }
+                }
+            }
+            Frag ^{
+                Cost ^{
+                    All ^{
+                        Credits=1500
+                    }
+                }
+            }
+            MM ^{
+                Cost ^{
+                    1 ^{
+                        Credits=500000
+                    }
+                }
+            }
+            MaxDmg ^{
+                Cost ^{
+                    All ^{
+                        Credits=786
+                    }
+                }
+            }
+            MinDmg ^{
+                Cost ^{
+                    All ^{
+                        Credits=1000
+                    }
+                }
+            }
+            MiningFactor ^{
+                Cost ^{
+                    All ^{
+                        Credits=50
+                    }
+                }
+            }
+            MissileAmmo ^{
+                Cost ^{
+                    All ^{
+                        Credits=1000
+                    }
+                }
+            }
+            MissileChanceHit ^{
+                Cost ^{
+                    All ^{
+                        Credits=5000
+                    }
+                }
+            }
+            MissileCount ^{
+                Cost ^{
+                    All ^{
+                        Credits=10000
+                    }
+                }
+            }
+            MissileMaxSpeed ^{
+                Cost ^{
+                    All ^{
+                        Credits=193
+                    }
+                }
+            }
+            MissileMinSpeed ^{
+                Cost ^{
+                    All ^{
+                        Credits=300
+                    }
+                }
+            }
+            PType ^{
+                Cost ^{
+                    0 ^{
+                        Credits=5000
+                    }
+                    1 ^{
+                        Credits=7500
+                    }
+                    2 ^{
+                        Credits=6000
+                    }
+                    3 ^{
+                        Credits=10000
+                    }
+                }
+            }
+            Race ^{
+                Cost ^{
+                    0 ^{
+                        Credits=5000
+                    }
+                    1 ^{
+                        Credits=10000
+                    }
+                    2 ^{
+                        Credits=15000
+                    }
+                    3 ^{
+                        Credits=20000
+                    }
+                    4 ^{
+                        Credits=25000
+                    }
+                    5 ^{
+                        Credits=10000
+                    }
+                    6 ^{
+                        Credits=100000
+                    }
+                    7 ^{
+                        Credits=15000
+                    }
+                }
+            }
+            Range ^{
+                Cost ^{
+                    All ^{
+                        Credits=5500
+                    }
+                }
+            }
+            ShotType ^{
+                AddParam ^{
+                    Cost ^{
+                        1 ^{
+                            Credits=1500
+                        }
+                        2 ^{
+                            Credits=200
+                        }
+                        3 ^{
+                            Credits=1000
+                        }
+                    }
+                }
+                Cost ^{
+                    1 ^{
+                        Credits=7500
+                    }
+                    2 ^{
+                        Credits=1000
+                    }
+                    3 ^{
+                        Credits=7500
+                    }
+                    4 ^{
+                        Credits=50000
+                    }
+                }
+            }
+            Shots ^{
+                Cost ^{
+                    All ^{
+                        Credits=100000
+                    }
+                }
+            }
+            Size ^{
+                Cost ^{
+                    All ^{
+                        Credits=500
+                    }
+                }
+            }
+            Special ^{
+                Cost ^{
+                    All ^{
+                        Credits=0
+                    }
+                }
+                Cost_Special ^{
+                    8 ^{
+                        Credits=1500
+                    }
+                    16 ^{
+                        Credits=25000
+                    }
+                    32 ^{
+                        Credits=250000
+                    }
+                    64 ^{
+                        Credits=10000
+                    }
+                    128 ^{
+                        Credits=10000
+                    }
+                    256 ^{
+                        Credits=7500
+                    }
+                    512 ^{
+                        Credits=2500
+                    }
+                    1024 ^{
+                        Credits=5500
+                    }
+                    2048 ^{
+                        Credits=500000
+                    }
+                    4096 ^{
+                        Credits=100000
+                    }
+                    8192 ^{
+                        Credits=5000
+                    }
+                    16384 ^{
+                        Credits=12500
+                    }
+                    32768 ^{
+                        Credits=5000
+                    }
+                    65536 ^{
+                        Credits=5000
+                    }
+                    131072 ^{
+                        Credits=5000
+                    }
+                    262144 ^{
+                        Credits=10000
+                    }
+                    524288 ^{
+                        Credits=10000
+                    }
+                    1048576 ^{
+                        Credits=350000
+                    }
+                }
+            }
+            WSpeed ^{
+                Cost ^{
+                    All ^{
+                        Credits=500
+                    }
+                }
+            }
+        }
+        Equipments ^{
+            ItemType ^{
+                Cost ^{
+                    0 ^{
+                        Credits=1000
+                    }
+                    1 ^{
+                        Credits=3500
+                    }
+                    2 ^{
+                        Credits=1500
+                    }
+                    3 ^{
+                        Credits=2000
+                    }
+                    4 ^{
+                        Credits=5000
+                    }
+                    5 ^{
+                        Credits=2500
+                    }
+                    6 ^{
+                        Credits=7500
+                    }
+                }
+            }
+            MM ^{
+                Cost ^{
+                    1 ^{
+                        Credits=250000
+                    }
+                }
+            }
+            Frag ^{
+                Cost ^{
+                    All ^{
+                        Credits=750
+                    }
+                }
+            }
+            Race ^{
+                Cost ^{
+                    0 ^{
+                        Credits=-10000
+                    }
+                    1 ^{
+                        Credits=-2500
+                    }
+                    2 ^{
+                        Credits=0
+                    }
+                    3 ^{
+                        Credits=5000
+                    }
+                    4 ^{
+                        Credits=15000
+                    }
+                    5 ^{
+                        Credits=7500
+                    }
+                    6 ^{
+                        Credits=25000
+                    }
+                    7 ^{
+                        Credits=1500
+                    }
+                }
+            }
+            Size ^{
+                Cost ^{
+                    All ^{
+                        Credits=750
+                    }
+                }
+            }
+            bonHull ^{
+                Cost ^{
+                    All ^{
+                        Credits=1500
+                    }
+                }
+            }
+            bonMass ^{
+                Cost ^{
+                    All ^{
+                        Credits=3000
+                    }
+                }
+            }
+            bonSpeed ^{
+                Cost ^{
+                    All ^{
+                        Credits=2500
+                    }
+                }
+            }
+            bonJump ^{
+                Cost ^{
+                    All ^{
+                        Credits=1000
+                    }
+                }
+            }
+            bonDroid ^{
+                Cost ^{
+                    All ^{
+                        Credits=700
+                    }
+                }
+            }
+            bonHook ^{
+                Cost ^{
+                    All ^{
+                        Credits=2500
+                    }
+                }
+            }
+            bonDef ^{
+                Cost ^{
+                    All ^{
+                        Credits=5000
+                    }
+                }
+            }
+            bonRadar ^{
+                Cost ^{
+                    All ^{
+                        Credits=1875
+                    }
+                }
+            }
+            bonScan ^{
+                Cost ^{
+                    All ^{
+                        Credits=500
+                    }
+                }
+            }
+            bonWEnergy ^{
+                Cost ^{
+                    All ^{
+                        Credits=300
+                    }
+                }
+            }
+            bonWSplinter ^{
+                Cost ^{
+                    All ^{
+                        Credits=300
+                    }
+                }
+            }
+            bonWMissile ^{
+                Cost ^{
+                    All ^{
+                        Credits=300
+                    }
+                }
+            }
+            bonWRadius ^{
+                Cost ^{
+                    All ^{
+                        Credits=1000
+                    }
+                }
+            }
+        }
+    }
+}
+ShipInfo ^{
+    AddInfo ^{
+        CustomInfos ^{
+            ArtiUniqueShipsPack_Crutch ^{
+                Description=NoShow
+                Icon=1
+                Name=-
+            }
+        }
+    }
+}

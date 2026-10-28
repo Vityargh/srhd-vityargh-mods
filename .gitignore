@@ -1,0 +1,21 @@
+# build outputs and local tooling
+*.exe
+*.obj
+*.o
+__pycache__/
+.srhd-build/
+.srhd-cache/
+evidence/
+out/
+*.log
+
+# never commit game binaries or game data dumps
+Rangers.exe
+Rangers*.exe
+MatrixGame.dll
+*base-language*.txt
+*catalog-lang*.txt
+
+# loader binaries ship only inside release archives
+dsound.dll
+XenoCore.dll

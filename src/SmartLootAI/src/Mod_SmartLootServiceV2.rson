@@ -1,0 +1,1635 @@
+{
+  "FileID": 573785173,
+  "FileVersion": 8,
+  "ViewPos.x": -75,
+  "ViewPos.y": -186,
+  "ScriptName": "Mod_SmartLootServiceV2",
+  "ScriptFileOut": "",
+  "ScriptTextOut": "",
+  "LangDatIn": "",
+  "LangDatOut": "",
+  "MainDatIn": "",
+  "MainDatOut": "",
+  "CacheDatIn": "",
+  "CacheDatOut": "",
+  "ExportLangTxt": false,
+  "ExportLangDat": true,
+  "Visual.Objects": [
+    {
+      "DialogAnswers": [
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic0",
+          "Pos.x": 0,
+          "Pos.y": 660,
+          "Parent": -1,
+          "#": 22,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.1'));",
+          "AMsg.Num": "0"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic1",
+          "Pos.x": 0,
+          "Pos.y": 720,
+          "Parent": -1,
+          "#": 24,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.3'));",
+          "AMsg.Num": "1"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic2",
+          "Pos.x": 0,
+          "Pos.y": 780,
+          "Parent": -1,
+          "#": 26,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.5'));",
+          "AMsg.Num": "2"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic3",
+          "Pos.x": 0,
+          "Pos.y": 840,
+          "Parent": -1,
+          "#": 28,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.7'));",
+          "AMsg.Num": "3"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic4",
+          "Pos.x": 0,
+          "Pos.y": 900,
+          "Parent": -1,
+          "#": 30,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.9'));",
+          "AMsg.Num": "4"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic5",
+          "Pos.x": 0,
+          "Pos.y": 960,
+          "Parent": -1,
+          "#": 32,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.11'));",
+          "AMsg.Num": "5"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic6",
+          "Pos.x": 0,
+          "Pos.y": 1020,
+          "Parent": -1,
+          "#": 34,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.13'));",
+          "AMsg.Num": "6"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic7",
+          "Pos.x": 0,
+          "Pos.y": 1080,
+          "Parent": -1,
+          "#": 36,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.15'));",
+          "AMsg.Num": "7"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic8",
+          "Pos.x": 0,
+          "Pos.y": 1140,
+          "Parent": -1,
+          "#": 38,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.17'));",
+          "AMsg.Num": "8"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic9",
+          "Pos.x": 0,
+          "Pos.y": 1200,
+          "Parent": -1,
+          "#": 40,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.19'));",
+          "AMsg.Num": "9"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic10",
+          "Pos.x": 0,
+          "Pos.y": 1260,
+          "Parent": -1,
+          "#": 42,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.21'));",
+          "AMsg.Num": "10"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic11",
+          "Pos.x": 0,
+          "Pos.y": 1320,
+          "Parent": -1,
+          "#": 44,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.23'));",
+          "AMsg.Num": "11"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic12",
+          "Pos.x": 0,
+          "Pos.y": 1380,
+          "Parent": -1,
+          "#": 46,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.25'));",
+          "AMsg.Num": "12"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic13",
+          "Pos.x": 0,
+          "Pos.y": 1440,
+          "Parent": -1,
+          "#": 48,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.27'));",
+          "AMsg.Num": "13"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic14",
+          "Pos.x": 0,
+          "Pos.y": 1500,
+          "Parent": -1,
+          "#": 50,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.29'));",
+          "AMsg.Num": "14"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic15",
+          "Pos.x": 0,
+          "Pos.y": 1560,
+          "Parent": -1,
+          "#": 52,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.31'));",
+          "AMsg.Num": "15"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic16",
+          "Pos.x": 0,
+          "Pos.y": 1620,
+          "Parent": -1,
+          "#": 54,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.33'));",
+          "AMsg.Num": "16"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic17",
+          "Pos.x": 0,
+          "Pos.y": 1680,
+          "Parent": -1,
+          "#": 56,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.35'));",
+          "AMsg.Num": "17"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic18",
+          "Pos.x": 0,
+          "Pos.y": 1740,
+          "Parent": -1,
+          "#": 58,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.37'));",
+          "AMsg.Num": "18"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic19",
+          "Pos.x": 0,
+          "Pos.y": 1800,
+          "Parent": -1,
+          "#": 60,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.39'));",
+          "AMsg.Num": "19"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic20",
+          "Pos.x": 0,
+          "Pos.y": 1860,
+          "Parent": -1,
+          "#": 62,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.41'));",
+          "AMsg.Num": "20"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic21",
+          "Pos.x": 0,
+          "Pos.y": 1920,
+          "Parent": -1,
+          "#": 64,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.43'));",
+          "AMsg.Num": "21"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic22",
+          "Pos.x": 0,
+          "Pos.y": 1980,
+          "Parent": -1,
+          "#": 66,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.45'));",
+          "AMsg.Num": "22"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic23",
+          "Pos.x": 0,
+          "Pos.y": 2040,
+          "Parent": -1,
+          "#": 68,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.47'));",
+          "AMsg.Num": "23"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic24",
+          "Pos.x": 0,
+          "Pos.y": 2100,
+          "Parent": -1,
+          "#": 70,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.49'));",
+          "AMsg.Num": "24"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic25",
+          "Pos.x": 0,
+          "Pos.y": 2160,
+          "Parent": -1,
+          "#": 72,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.51'));",
+          "AMsg.Num": "25"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic26",
+          "Pos.x": 0,
+          "Pos.y": 2220,
+          "Parent": -1,
+          "#": 74,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.53'));",
+          "AMsg.Num": "26"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic27",
+          "Pos.x": 0,
+          "Pos.y": 2280,
+          "Parent": -1,
+          "#": 76,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.55'));",
+          "AMsg.Num": "27"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic28",
+          "Pos.x": 0,
+          "Pos.y": 2340,
+          "Parent": -1,
+          "#": 78,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.57'));",
+          "AMsg.Num": "28"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic29",
+          "Pos.x": 0,
+          "Pos.y": 2400,
+          "Parent": -1,
+          "#": 80,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.59'));",
+          "AMsg.Num": "29"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic30",
+          "Pos.x": 0,
+          "Pos.y": 2460,
+          "Parent": -1,
+          "#": 82,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.61'));",
+          "AMsg.Num": "30"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic31",
+          "Pos.x": 0,
+          "Pos.y": 2520,
+          "Parent": -1,
+          "#": 84,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.63'));",
+          "AMsg.Num": "31"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic32",
+          "Pos.x": 0,
+          "Pos.y": 2580,
+          "Parent": -1,
+          "#": 86,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.65'));",
+          "AMsg.Num": "32"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "topic33",
+          "Pos.x": 0,
+          "Pos.y": 2640,
+          "Parent": -1,
+          "#": 88,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.67'));",
+          "AMsg.Num": "33"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "Goodbye",
+          "Pos.x": 0,
+          "Pos.y": 2700,
+          "Parent": -1,
+          "#": 90,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.69'));",
+          "AMsg.Num": "34"
+        },
+        {
+          "Type": "TDialogAnswer",
+          "Name": "Back",
+          "Pos.x": 0,
+          "Pos.y": 2730,
+          "Parent": -1,
+          "#": 91,
+          "Msg": "DAnswer(CT('Script.Mod_SmartLootServiceV2.70'));",
+          "AMsg.Num": "35"
+        }
+      ],
+      "DialogMessages": [],
+      "Dialogs": [
+        {
+          "Type": "TDialog",
+          "Name": "CrewTalk",
+          "Pos.x": 0,
+          "Pos.y": 600,
+          "Parent": -1,
+          "#": 20
+        }
+      ],
+      "Groups": [
+        {
+          "Type": "TGroup",
+          "Name": "ServiceGroup",
+          "Pos.x": 0,
+          "Pos.y": 570,
+          "Parent": -1,
+          "#": 19,
+          "Owner": 62,
+          "Group.Type": 126,
+          "CntShipMin": 0,
+          "CntShipMax": 0,
+          "SpeedMin": 100,
+          "SpeedMax": 10000,
+          "Weapon": 0,
+          "CargoHook": 0,
+          "EmptySpace": 0,
+          "AddPlayer": false,
+          "StatusTraderMin": 0,
+          "StatusTraderMax": 100,
+          "StatusWarriorMin": 0,
+          "StatusWarriorMax": 100,
+          "StatusPirateMin": 0,
+          "StatusPirateMax": 100,
+          "DistSearch": 10000,
+          "Dialog": -1,
+          "StrengthMin": "0",
+          "StrengthMax": "0",
+          "Ruins": "",
+          "+Planet": "ServicePlanet",
+          "+State": 0
+        }
+      ],
+      "Items": [],
+      "Operations": [
+        {
+          "Type": "Top",
+          "Name": "Global",
+          "Pos.x": 0,
+          "Pos.y": 0,
+          "Parent": -1,
+          "#": 0,
+          "Code.Type": "Global",
+          "Code": [
+            "GRun();"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "FleetTurn",
+          "Pos.x": 0,
+          "Pos.y": 420,
+          "Parent": -1,
+          "#": 14,
+          "Code.Type": "Turn",
+          "Code": [
+            "function ServiceReady() {",
+            "    unknown ready_call=ImportedFunction('SmartLootService','SL_Ready');",
+            "    { result=ready_call(); exit; }",
+            "}",
+            "function ServiceWork(dword star) {",
+            "    unknown work_call=ImportedFunction('SmartLootService','SL_CountWork');",
+            "    { result=work_call(star); exit; }",
+            "}",
+            "function ServicePrep(dword ship) {",
+            "    unknown prepare_call=ImportedFunction('SmartLootService','SL_Prepare');",
+            "    { result=prepare_call(ship); exit; }",
+            "}",
+            "function ServiceClean(dword ship,int quota) {",
+            "    unknown cleanup_call=ImportedFunction('SmartLootService','SL_Clean');",
+            "    { result=cleanup_call(ship,quota); exit; }",
+            "}",
+            "function ServiceMove(dword ship) {",
+            "    unknown move_call=ImportedFunction('SmartLootService','SL_Move');",
+            "    { result=move_call(ship); exit; }",
+            "}",
+            "function ServiceAtStar(int star_id,int exclude) {",
+            "    int n=0,j=0;dword ship=0;",
+            "    for(j=1;j<=15;j=j+1) {",
+            "        if(j==exclude || SL_ids[j]==0)continue;",
+            "        ",
+            "        if(SL_dest[j]==star_id)n=n+1;",
+            "        else if(SL_system[j]==star_id)n=n+1;",
+            "    }",
+            "    { result=n; exit; }",
+            "}",
+            "function ServiceName(int slot) {",
+            "    if(slot%3==0){ result=CT('Script.Mod_SmartLootServiceV2.SCV01'); exit; }",
+            "    if(slot%3==1){ result=CT('Script.Mod_SmartLootServiceV2.SCV02'); exit; }",
+            "    { result=CT('Script.Mod_SmartLootServiceV2.SCV03'); exit; }",
+            "}",
+            "function ServiceAdopt(dword ship,int slot) {",
+            "    if(!ship || ship==Player())exit;",
+            "    SL_system[slot]=Id(ShipStar(ship));SL_ids[slot]=Id(ship);SL_dest[slot]=0;SL_qturn[slot]=CurTurn();SL_used[slot]=10;",
+            "    ShipJoin(ServiceGroup,ship,'ServiceIdle');",
+            "    SetName(ship,ServiceName(slot));",
+            "    NoDropToShip(ship,1);NoTargetToShip(ship,1);",
+            "    ServicePrep(ship);",
+            "}",
+            "function ServiceTurn() {",
+            "    int i=0,j=0,k=0,n=0,count=0,free_slot=-1,dest_id=0,work=0;",
+            "    dword ship=0,star=0,planet=0,destination=0;",
+            "    if(!SL_started){",
+            "        SL_started=1;SL_first=CurTurn();",
+            "        ArrayClear(SL_system);ArrayAdd(SL_system,0);ArrayClear(SL_ids);ArrayAdd(SL_ids,0);ArrayClear(SL_dest);ArrayAdd(SL_dest,0);ArrayClear(SL_qturn);ArrayAdd(SL_qturn,0);ArrayClear(SL_used);ArrayAdd(SL_used,0);",
+            "        for(i=1;i<=15;i=i+1){ArrayAdd(SL_system,0);ArrayAdd(SL_ids,0);ArrayAdd(SL_dest,0);ArrayAdd(SL_qturn,0);ArrayAdd(SL_used,0);}",
+            "        exit;",
+            "    }",
+            "    if(CurTurn()<=SL_first)exit;",
+            "    if(SL_busy && SL_busy_turn==CurTurn())exit;",
+            "    SL_busy=1;SL_busy_turn=CurTurn();",
+            "    // Native part not running (no XenoNativeLoader or unsupported game build): tell the player once per save.",
+            "    if(!ServiceReady()){",
+            "        SL_busy=0;",
+            "        if(!SL_warned){SL_warned=1;MessageBox(CT('Script.Mod_SmartLootServiceV2.NoLoader'));}",
+            "        exit;",
+            "    }",
+            "    SL_warned=0;",
+            "    if(GalaxyStars()==0){SL_busy=0;exit;}",
+            "    SL_cursor=(SL_cursor+1)%GalaxyStars();",
+            "    dword candidate=GalaxyStar(SL_cursor);",
+            "    if(!candidate){SL_busy=0;exit;}",
+            "    dword legacy_ship=0;",
+            "    // Bounded migration: inspect just this system; no fresh fleet until first sweep.",
+            "    for(j=0;j<StarShips(candidate);j=j+1) {",
+            "        legacy_ship=StarShips(candidate,j);if(!legacy_ship || legacy_ship==Player())continue;",
+            "        if(ShipTypeN(legacy_ship)>=t_RC)continue;",
+            "        if(ShipName(legacy_ship)!='SmartLootAI - Janitor')continue;",
+            "        free_slot=-1;",
+            "        for(i=1;i<=15;i=i+1){if(SL_ids[i]==0){free_slot=i;break;}}",
+            "        if(free_slot>0 && ServiceAtStar(Id(candidate),-1)<2)ServiceAdopt(legacy_ship,free_slot);",
+            "        else {NoDropToShip(legacy_ship,1);ShipDestroy(legacy_ship);}",
+            "    }",
+            "    if(SL_cursor==0)SL_scan_complete=1;",
+            "    free_slot=-1;",
+            "    for(i=1;i<=15;i=i+1) {",
+            "        ship=IdToShip(SL_ids[i]);",
+            "        if(!ship){SL_ids[i]=0;SL_dest[i]=0;if(free_slot<0)free_slot=i;continue;}",
+            "        count=count+1;",
+            "        if(ship==Player())continue;",
+            "        if(ShipTypeN(ship)>=t_RC)continue;",
+            "        ServicePrep(ship);",
+            "        if(ShipInHyperSpace(ship) || ShipIsTakeoff(ship))continue;",
+            "        if(!ShipInNormalSpace(ship)) {",
+            "            if(GetShipPlanet(ship) || GetShipRuins(ship))OrderTakeOff(ship);",
+            "            continue;",
+            "        }",
+            "        star=ShipStar(ship);if(!star)continue;SL_system[i]=Id(star);",
+            "        if(SL_dest[i] && Id(star)!=SL_dest[i])continue;",
+            "        SL_dest[i]=0;",
+            "        if(SL_qturn[i]!=CurTurn()){SL_qturn[i]=CurTurn();SL_used[i]=0;}",
+            "        if(SL_used[i]<10) {",
+            "            n=10-SL_used[i];SL_used[i]=10;",
+            "            ServiceClean(ship,n);",
+            "        }",
+            "        work=ServiceWork(star);",
+            "        if(work>0){ServiceMove(ship);continue;}",
+            "        destination=0;",
+            "        if(candidate!=star && ServiceAtStar(Id(candidate),i)<2 && ServiceWork(candidate)>0)destination=candidate;",
+            "        if(destination){SL_dest[i]=Id(destination);OrderJump(ship,destination);}",
+            "        else ServiceMove(ship);",
+            "    }",
+            "    // Spawn at most one per turn; assign metadata before reentrant callbacks.",
+            "    if(SL_scan_complete && count<10 && free_slot>0) {",
+            "        planet=0;",
+            "        star=candidate;",
+            "        if(ServiceAtStar(Id(star),-1)<2 && ServiceWork(star)>0) {",
+            "            if(StarPlanets(star)>0) {",
+            "                SL_planet_cursor=(SL_planet_cursor+1)%StarPlanets(star);",
+            "                planet=StarPlanets(star,SL_planet_cursor);",
+            "                if(planet) {if(PlanetRace(planet)!=People || PlanetOwner(planet)!=People)planet=0;}",
+            "            }",
+            "        }",
+            "        if(planet) {",
+            "            ship=BuyTransport(planet,2,100);",
+            "            if(ship && ship!=Player()) {",
+            "                ServiceAdopt(ship,free_slot);",
+            "                OrderTakeOff(ship);",
+            "            }",
+            "        }",
+            "    }",
+            "    SL_busy=0;",
+            "}",
+            "ServiceTurn();"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Menu",
+          "Pos.x": 0,
+          "Pos.y": 630,
+          "Parent": -1,
+          "#": 21,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.0'));",
+            "DAdd('0');",
+            "DAdd('1');",
+            "DAdd('2');",
+            "DAdd('3');",
+            "DAdd('4');",
+            "DAdd('5');",
+            "DAdd('6');",
+            "DAdd('7');",
+            "DAdd('8');",
+            "DAdd('9');",
+            "DAdd('10');",
+            "DAdd('11');",
+            "DAdd('12');",
+            "DAdd('13');",
+            "DAdd('14');",
+            "DAdd('15');",
+            "DAdd('16');",
+            "DAdd('17');",
+            "DAdd('18');",
+            "DAdd('19');",
+            "DAdd('20');",
+            "DAdd('21');",
+            "DAdd('22');",
+            "DAdd('23');",
+            "DAdd('24');",
+            "DAdd('25');",
+            "DAdd('26');",
+            "DAdd('27');",
+            "DAdd('28');",
+            "DAdd('29');",
+            "DAdd('30');",
+            "DAdd('31');",
+            "DAdd('32');",
+            "DAdd('33');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply0",
+          "Pos.x": 0,
+          "Pos.y": 690,
+          "Parent": -1,
+          "#": 23,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.2'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply1",
+          "Pos.x": 0,
+          "Pos.y": 750,
+          "Parent": -1,
+          "#": 25,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.4'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply2",
+          "Pos.x": 0,
+          "Pos.y": 810,
+          "Parent": -1,
+          "#": 27,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.6'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply3",
+          "Pos.x": 0,
+          "Pos.y": 870,
+          "Parent": -1,
+          "#": 29,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.8'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply4",
+          "Pos.x": 0,
+          "Pos.y": 930,
+          "Parent": -1,
+          "#": 31,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.10'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply5",
+          "Pos.x": 0,
+          "Pos.y": 990,
+          "Parent": -1,
+          "#": 33,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.12'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply6",
+          "Pos.x": 0,
+          "Pos.y": 1050,
+          "Parent": -1,
+          "#": 35,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.14'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply7",
+          "Pos.x": 0,
+          "Pos.y": 1110,
+          "Parent": -1,
+          "#": 37,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.16'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply8",
+          "Pos.x": 0,
+          "Pos.y": 1170,
+          "Parent": -1,
+          "#": 39,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.18'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply9",
+          "Pos.x": 0,
+          "Pos.y": 1230,
+          "Parent": -1,
+          "#": 41,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.20'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply10",
+          "Pos.x": 0,
+          "Pos.y": 1290,
+          "Parent": -1,
+          "#": 43,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.22'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply11",
+          "Pos.x": 0,
+          "Pos.y": 1350,
+          "Parent": -1,
+          "#": 45,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.24'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply12",
+          "Pos.x": 0,
+          "Pos.y": 1410,
+          "Parent": -1,
+          "#": 47,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.26'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply13",
+          "Pos.x": 0,
+          "Pos.y": 1470,
+          "Parent": -1,
+          "#": 49,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.28'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply14",
+          "Pos.x": 0,
+          "Pos.y": 1530,
+          "Parent": -1,
+          "#": 51,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.30'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply15",
+          "Pos.x": 0,
+          "Pos.y": 1590,
+          "Parent": -1,
+          "#": 53,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.32'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply16",
+          "Pos.x": 0,
+          "Pos.y": 1650,
+          "Parent": -1,
+          "#": 55,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.34'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply17",
+          "Pos.x": 0,
+          "Pos.y": 1710,
+          "Parent": -1,
+          "#": 57,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.36'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply18",
+          "Pos.x": 0,
+          "Pos.y": 1770,
+          "Parent": -1,
+          "#": 59,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.38'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply19",
+          "Pos.x": 0,
+          "Pos.y": 1830,
+          "Parent": -1,
+          "#": 61,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.40'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply20",
+          "Pos.x": 0,
+          "Pos.y": 1890,
+          "Parent": -1,
+          "#": 63,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.42'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply21",
+          "Pos.x": 0,
+          "Pos.y": 1950,
+          "Parent": -1,
+          "#": 65,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.44'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply22",
+          "Pos.x": 0,
+          "Pos.y": 2010,
+          "Parent": -1,
+          "#": 67,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.46'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply23",
+          "Pos.x": 0,
+          "Pos.y": 2070,
+          "Parent": -1,
+          "#": 69,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.48'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply24",
+          "Pos.x": 0,
+          "Pos.y": 2130,
+          "Parent": -1,
+          "#": 71,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.50'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply25",
+          "Pos.x": 0,
+          "Pos.y": 2190,
+          "Parent": -1,
+          "#": 73,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.52'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply26",
+          "Pos.x": 0,
+          "Pos.y": 2250,
+          "Parent": -1,
+          "#": 75,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.54'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply27",
+          "Pos.x": 0,
+          "Pos.y": 2310,
+          "Parent": -1,
+          "#": 77,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.56'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply28",
+          "Pos.x": 0,
+          "Pos.y": 2370,
+          "Parent": -1,
+          "#": 79,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.58'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply29",
+          "Pos.x": 0,
+          "Pos.y": 2430,
+          "Parent": -1,
+          "#": 81,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.60'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply30",
+          "Pos.x": 0,
+          "Pos.y": 2490,
+          "Parent": -1,
+          "#": 83,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.62'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply31",
+          "Pos.x": 0,
+          "Pos.y": 2550,
+          "Parent": -1,
+          "#": 85,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.64'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply32",
+          "Pos.x": 0,
+          "Pos.y": 2610,
+          "Parent": -1,
+          "#": 87,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.66'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Reply33",
+          "Pos.x": 0,
+          "Pos.y": 2670,
+          "Parent": -1,
+          "#": 89,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.68'));",
+            "DAdd('35');",
+            "DAdd('34');"
+          ]
+        },
+        {
+          "Type": "Top",
+          "Name": "Bye",
+          "Pos.x": 0,
+          "Pos.y": 2760,
+          "Parent": -1,
+          "#": 92,
+          "Code.Type": "Turn",
+          "Code": [
+            "DText(CT('Script.Mod_SmartLootServiceV2.71'));",
+            "DAnswer('exit');"
+          ]
+        }
+      ],
+      "Places": [],
+      "Planets": [
+        {
+          "Type": "TPlanet",
+          "Name": "ServicePlanet",
+          "Pos.x": 0,
+          "Pos.y": 540,
+          "Parent": -1,
+          "#": 18,
+          "Race": 62,
+          "Owner": 62,
+          "Economy": 14,
+          "Goverment": 62,
+          "RangeMin": 0,
+          "RangeMax": 100,
+          "Dialog": -1,
+          "+Star": "ServiceStar"
+        }
+      ],
+      "Ships": [
+        {
+          "Type": "TStarShip",
+          "Name": "PlayerStart",
+          "Pos.x": 0,
+          "Pos.y": 510,
+          "Parent": -1,
+          "#": 17,
+          "Count": 1,
+          "Owner": 62,
+          "Ship.Type": 126,
+          "Player": true,
+          "SpeedMin": 0,
+          "SpeedMax": 10000,
+          "Weapon": 0,
+          "CargoHook": 0,
+          "EmptySpace": 0,
+          "StatusTraderMin": 0,
+          "StatusTraderMax": 100,
+          "StatusWarriorMin": 0,
+          "StatusWarriorMax": 100,
+          "StatusPirateMin": 0,
+          "StatusPirateMax": 100,
+          "StrengthMin": "0",
+          "StrengthMax": "0",
+          "Ruins": "",
+          "+Star": "ServiceStar"
+        }
+      ],
+      "Stars": [
+        {
+          "Type": "TStar",
+          "Name": "ServiceStar",
+          "Pos.x": 0,
+          "Pos.y": 480,
+          "Parent": -1,
+          "#": 16,
+          "Constellation": 0,
+          "Priority": 0,
+          "NoKling": false,
+          "NoComeKling": false
+        }
+      ],
+      "States": [
+        {
+          "Type": "TState",
+          "Name": "ServiceIdle",
+          "Pos.x": 0,
+          "Pos.y": 450,
+          "Parent": -1,
+          "#": 15,
+          "Move": 0,
+          "MoveObj": -1,
+          "Attack.Count": 0,
+          "TakeItem": -1,
+          "TakeAllItem": false,
+          "OnTalk": "CrewTalk",
+          "OnActCode": "[t_OnTakingDamage,t_OnTakingDamageMi,t_OnTakingDamageEn,t_OnTakingDamageSp|0]\r\nScriptItemActParam(0);",
+          "EType": 0,
+          "EUnique": "",
+          "EMsg": ""
+        }
+      ],
+      "Variables": [
+        {
+          "Type": "TVar",
+          "Name": "SL_ids",
+          "Pos.x": 0,
+          "Pos.y": 30,
+          "Parent": -1,
+          "#": 1,
+          "Var.Type": "Array",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_dest",
+          "Pos.x": 0,
+          "Pos.y": 60,
+          "Parent": -1,
+          "#": 2,
+          "Var.Type": "Array",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_qturn",
+          "Pos.x": 0,
+          "Pos.y": 90,
+          "Parent": -1,
+          "#": 3,
+          "Var.Type": "Array",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_used",
+          "Pos.x": 0,
+          "Pos.y": 120,
+          "Parent": -1,
+          "#": 4,
+          "Var.Type": "Array",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_system",
+          "Pos.x": 0,
+          "Pos.y": 150,
+          "Parent": -1,
+          "#": 5,
+          "Var.Type": "Array",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_started",
+          "Pos.x": 0,
+          "Pos.y": 180,
+          "Parent": -1,
+          "#": 6,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_first",
+          "Pos.x": 0,
+          "Pos.y": 210,
+          "Parent": -1,
+          "#": 7,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_busy",
+          "Pos.x": 0,
+          "Pos.y": 240,
+          "Parent": -1,
+          "#": 8,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_busy_turn",
+          "Pos.x": 0,
+          "Pos.y": 270,
+          "Parent": -1,
+          "#": 9,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_cursor",
+          "Pos.x": 0,
+          "Pos.y": 300,
+          "Parent": -1,
+          "#": 10,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_planet_cursor",
+          "Pos.x": 0,
+          "Pos.y": 330,
+          "Parent": -1,
+          "#": 11,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_scan_complete",
+          "Pos.x": 0,
+          "Pos.y": 360,
+          "Parent": -1,
+          "#": 12,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": true
+        },
+        {
+          "Type": "TVar",
+          "Name": "SL_warned",
+          "Pos.x": 0,
+          "Pos.y": 390,
+          "Parent": -1,
+          "#": 13,
+          "Var.Type": "Int",
+          "Init": "0",
+          "Global": true
+        }
+      ],
+      "ConstellationCount": 0
+    }
+  ],
+  "Visual.Links": [
+    {
+      "Type": "TGraphLink",
+      "Begin": 18,
+      "End": 16,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 17,
+      "End": 16,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 19,
+      "End": 18,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 19,
+      "End": 15,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 20,
+      "End": 21,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 22,
+      "End": 23,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 24,
+      "End": 25,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 26,
+      "End": 27,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 28,
+      "End": 29,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 30,
+      "End": 31,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 32,
+      "End": 33,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 34,
+      "End": 35,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 36,
+      "End": 37,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 38,
+      "End": 39,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 40,
+      "End": 41,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 42,
+      "End": 43,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 44,
+      "End": 45,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 46,
+      "End": 47,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 48,
+      "End": 49,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 50,
+      "End": 51,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 52,
+      "End": 53,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 54,
+      "End": 55,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 56,
+      "End": 57,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 58,
+      "End": 59,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 60,
+      "End": 61,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 62,
+      "End": 63,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 64,
+      "End": 65,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 66,
+      "End": 67,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 68,
+      "End": 69,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 70,
+      "End": 71,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 72,
+      "End": 73,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 74,
+      "End": 75,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 76,
+      "End": 77,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 78,
+      "End": 79,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 80,
+      "End": 81,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 82,
+      "End": 83,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 84,
+      "End": 85,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 86,
+      "End": 87,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 88,
+      "End": 89,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 91,
+      "End": 21,
+      "Nom": 0,
+      "Arrow": true
+    },
+    {
+      "Type": "TGraphLink",
+      "Begin": 90,
+      "End": 92,
+      "Nom": 0,
+      "Arrow": true
+    }
+  ],
+  "Rect.Text": []
+}

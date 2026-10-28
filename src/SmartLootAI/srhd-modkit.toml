@@ -1,0 +1,9 @@
+schema = "srhd-modkit-project-v1"
+name = "SmartLootAI"
+mod_root = "RuntimeMod"
+prefix = "OtherMods/SmartLootAI"
+default_variant = "release"
+build_root = ".srhd-build"
+cache_root = ".srhd-cache"
+
+[variants.release]

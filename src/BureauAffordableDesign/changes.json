@@ -1,0 +1,650 @@
+{
+  "source_lang_sha256": "47b786f242c80a6c59cff3a02a850e2b0b28da966002e1e4c7e35587ef7f510a",
+  "changes": [
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/MM/Cost/1",
+      "before": 5000000,
+      "after": 500000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Race/Cost/0",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Race/Cost/1",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Race/Cost/2",
+      "before": 150000,
+      "after": 15000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Race/Cost/3",
+      "before": 200000,
+      "after": 20000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Race/Cost/4",
+      "before": 250000,
+      "after": 25000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Race/Cost/5",
+      "before": 2500000,
+      "after": 250000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Race/Cost/6",
+      "before": 5000000,
+      "after": 500000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Race/Cost/7",
+      "before": 150000,
+      "after": 15000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Size/Cost/All",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/SuspectibilityE/Cost/All",
+      "before": 110000,
+      "after": 11000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/SuspectibilityS/Cost/All",
+      "before": 110000,
+      "after": 11000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/SuspectibilityM/Cost/All",
+      "before": 110000,
+      "after": 11000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Type/Cost/0",
+      "before": 1500000,
+      "after": 150000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/Type/Cost/1",
+      "before": 1500000,
+      "after": 150000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonHull/Cost/All",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonMass/Cost/All",
+      "before": 500000,
+      "after": 50000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonResistAsteroid/Cost/All",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSkill1/Cost/All",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSkill2/Cost/All",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSkill3/Cost/All",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSlotWeapon/Cost/All",
+      "before": 125000,
+      "after": 12500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSlotArt/Cost/All",
+      "before": 125000,
+      "after": 12500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSlotDef/Cost/1",
+      "before": 250000,
+      "after": 25000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSlotDroid/Cost/1",
+      "before": 125000,
+      "after": 12500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSlotForsage/Cost/1",
+      "before": 250000,
+      "after": 25000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSlotHook/Cost/1",
+      "before": 30000,
+      "after": 3000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSlotRadar/Cost/1",
+      "before": 75000,
+      "after": 7500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Hull/bonSlotScaner/Cost/1",
+      "before": 15000,
+      "after": 1500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/1",
+      "before": -10000,
+      "after": -1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/10",
+      "before": 80000,
+      "after": 8000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/11",
+      "before": 1000000,
+      "after": 100000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/12",
+      "before": 60000,
+      "after": 6000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/13",
+      "before": 70000,
+      "after": 7000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/14",
+      "before": 150000,
+      "after": 15000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/15",
+      "before": 175000,
+      "after": 17500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/16",
+      "before": 200000,
+      "after": 20000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/17",
+      "before": 20000,
+      "after": 2000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/18",
+      "before": 75000,
+      "after": 7500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/2",
+      "before": 5000,
+      "after": 500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/3",
+      "before": 10000,
+      "after": 1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/4",
+      "before": 30000,
+      "after": 3000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/5",
+      "before": -50000,
+      "after": -5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/7",
+      "before": 25000,
+      "after": 2500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/8",
+      "before": 10000,
+      "after": 1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ABType/Cost/9",
+      "before": 35000,
+      "after": 3500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Frag/Cost/All",
+      "before": 15000,
+      "after": 1500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MM/Cost/1",
+      "before": 5000000,
+      "after": 500000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MaxDmg/Cost/All",
+      "before": 7859,
+      "after": 786
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MinDmg/Cost/All",
+      "before": 10000,
+      "after": 1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MiningFactor/Cost/All",
+      "before": 500,
+      "after": 50
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MissileAmmo/Cost/All",
+      "before": 10000,
+      "after": 1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MissileChanceHit/Cost/All",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MissileCount/Cost/All",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MissileMaxSpeed/Cost/All",
+      "before": 1929,
+      "after": 193
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/MissileMinSpeed/Cost/All",
+      "before": 3000,
+      "after": 300
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/PType/Cost/0",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/PType/Cost/1",
+      "before": 75000,
+      "after": 7500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/PType/Cost/2",
+      "before": 60000,
+      "after": 6000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/PType/Cost/3",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Race/Cost/0",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Race/Cost/1",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Race/Cost/2",
+      "before": 150000,
+      "after": 15000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Race/Cost/3",
+      "before": 200000,
+      "after": 20000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Race/Cost/4",
+      "before": 250000,
+      "after": 25000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Race/Cost/5",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Race/Cost/6",
+      "before": 1000000,
+      "after": 100000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Race/Cost/7",
+      "before": 150000,
+      "after": 15000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Range/Cost/All",
+      "before": 55000,
+      "after": 5500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ShotType/AddParam/Cost/1",
+      "before": 15000,
+      "after": 1500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ShotType/AddParam/Cost/2",
+      "before": 2000,
+      "after": 200
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ShotType/AddParam/Cost/3",
+      "before": 10000,
+      "after": 1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ShotType/Cost/1",
+      "before": 75000,
+      "after": 7500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ShotType/Cost/2",
+      "before": 10000,
+      "after": 1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ShotType/Cost/3",
+      "before": 75000,
+      "after": 7500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/ShotType/Cost/4",
+      "before": 500000,
+      "after": 50000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Shots/Cost/All",
+      "before": 1000000,
+      "after": 100000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Size/Cost/All",
+      "before": 5000,
+      "after": 500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost/All",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/8",
+      "before": 15000,
+      "after": 1500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/16",
+      "before": 250000,
+      "after": 25000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/32",
+      "before": 2500000,
+      "after": 250000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/64",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/128",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/256",
+      "before": 75000,
+      "after": 7500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/512",
+      "before": 25000,
+      "after": 2500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/1024",
+      "before": 55000,
+      "after": 5500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/2048",
+      "before": 5000000,
+      "after": 500000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/4096",
+      "before": 1000000,
+      "after": 100000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/8192",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/16384",
+      "before": 125000,
+      "after": 12500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/32768",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/65536",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/131072",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/262144",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/524288",
+      "before": 100000,
+      "after": 10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/Special/Cost_Special/1048576",
+      "before": 3500000,
+      "after": 350000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Weapon/WSpeed/Cost/All",
+      "before": 5000,
+      "after": 500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/ItemType/Cost/0",
+      "before": 10000,
+      "after": 1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/ItemType/Cost/1",
+      "before": 35000,
+      "after": 3500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/ItemType/Cost/2",
+      "before": 15000,
+      "after": 1500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/ItemType/Cost/3",
+      "before": 20000,
+      "after": 2000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/ItemType/Cost/4",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/ItemType/Cost/5",
+      "before": 25000,
+      "after": 2500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/ItemType/Cost/6",
+      "before": 75000,
+      "after": 7500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/MM/Cost/1",
+      "before": 2500000,
+      "after": 250000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Frag/Cost/All",
+      "before": 7500,
+      "after": 750
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Race/Cost/0",
+      "before": -100000,
+      "after": -10000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Race/Cost/1",
+      "before": -25000,
+      "after": -2500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Race/Cost/2",
+      "before": 0,
+      "after": 0
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Race/Cost/3",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Race/Cost/4",
+      "before": 150000,
+      "after": 15000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Race/Cost/5",
+      "before": 75000,
+      "after": 7500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Race/Cost/6",
+      "before": 250000,
+      "after": 25000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Race/Cost/7",
+      "before": 15000,
+      "after": 1500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/Size/Cost/All",
+      "before": 7500,
+      "after": 750
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonHull/Cost/All",
+      "before": 15000,
+      "after": 1500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonMass/Cost/All",
+      "before": 30000,
+      "after": 3000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonSpeed/Cost/All",
+      "before": 25000,
+      "after": 2500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonJump/Cost/All",
+      "before": 10000,
+      "after": 1000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonDroid/Cost/All",
+      "before": 7000,
+      "after": 700
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonHook/Cost/All",
+      "before": 25000,
+      "after": 2500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonDef/Cost/All",
+      "before": 50000,
+      "after": 5000
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonRadar/Cost/All",
+      "before": 18750,
+      "after": 1875
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonScan/Cost/All",
+      "before": 5000,
+      "after": 500
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonWEnergy/Cost/All",
+      "before": 3000,
+      "after": 300
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonWSplinter/Cost/All",
+      "before": 3000,
+      "after": 300
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonWMissile/Cost/All",
+      "before": 3000,
+      "after": 300
+    },
+    {
+      "path": "DesignDepartmentModList/CreateEquipment/Equipments/bonWRadius/Cost/All",
+      "before": 10000,
+      "after": 1000
+    }
+  ]
+}
