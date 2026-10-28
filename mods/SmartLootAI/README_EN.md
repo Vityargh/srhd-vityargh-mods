@@ -1,4 +1,4 @@
-# SmartLootAI 2.0.1 - Vityargh
+# SmartLootAI 0.9 (beta) - Vityargh
 
 Space gets cleaner: unwanted loot is removed by ordinary ships and a dedicated janitor service.
 
@@ -47,7 +47,7 @@ File `Mods\OtherMods\SmartLootAI\Native\SmartLootAI.XenoPlugin.ini`, section `[S
 ## If it doesn't work
 
 * **A message says the sanitation service is not running.** The loader is missing or the game version is not supported. Unpack the whole archive into the game folder and restart.
-* **Details** are written to `XenoNative.log` in the game folder. `ACTIVE 2.0.1` means everything works; `BLOCKED` explains why the mod did not start.
+* **Details** are written to `XenoNative.log` in the game folder. `ACTIVE 0.9` means everything works; `BLOCKED` explains why the mod did not start.
 
 ## Compatibility
 
@@ -56,3 +56,14 @@ Tested on Space Rangers HD: A War Apart 2.1.2500 (Steam). On other versions the 
 ## Rollback
 
 Disable the mod and press Apply. The service state already written to a save stays there; for a full rollback use a save made before installing the mod.
+
+## Plans
+
+This is an early version, and much of what I have in mind is still ahead:
+
+* **A ship of its own for each janitor.** Right now Elbow Grease, Skate and Wishbone fly identical ships. The idea: Elbow Grease is an old, battered industrial collector with containers and manipulators, Skate is modern and compact, Wishbone is a small utility craft.
+* **The Quiet Harbor station.** The service's base: repairs, junk sorting and a tavern for space workers where janitors wait between shifts.
+* **Crew portraits** in conversations.
+* **In-game settings**, no file editing needed.
+
+I build the code and the models together with AI, and I don't have much experience with 3D models for the game yet. Any help is very welcome - models, testing, ideas, translations - and so are your forks.

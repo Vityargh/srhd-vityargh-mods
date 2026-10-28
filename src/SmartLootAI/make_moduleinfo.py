@@ -12,8 +12,8 @@ lines = [
  'Section=Моды Vityargh',
  'SectionEng=Vityargh Mods',
  'Languages=Rus,Eng',
- 'SmallDescription=Версия 2.0.1. Служба мусорщиков и уборка лишнего лута в космосе.',
- 'FullDescription=<color=0,80,170>Версия 2.0.1</color><br>',
+ 'SmallDescription=Версия 0.9 (бета). Служба мусорщиков и уборка лишнего лута в космосе.',
+ 'FullDescription=<color=0,80,170>Версия 0.9 (бета)</color><br>',
  'FullDescription=Космос становится чище: лишний лут убирают обычные корабли и отдельная служба мусорщиков.<br><br>',
  'FullDescription=<color=0,80,170>Что убирается</color><br>',
  'FullDescription=Минералы, товары и бесполезный хлам исчезают сразу. Оборудование и оружие копятся: в каждой системе остаётся до 50 штук, а лишнее убирается начиная с самого дешёвого.<br><br>',
@@ -23,8 +23,10 @@ lines = [
  'FullDescription=Корабли стреляют по мусору только свободными орудиями и не отвлекаются от боя. Мусорщики Работяга, Скат и Косточка неуязвимы, ни с кем не воюют и сами перелетают между системами. С ними можно поговорить.<br><br>',
  'FullDescription=<color=0,80,170>Как включить</color><br>',
  'FullDescription=Распакуйте архив мода в папку игры целиком, включите мод, примените изменения и полностью перезапустите игру. Нужный загрузчик XenoNativeLoader уже лежит в архиве. Перед первым запуском лучше сделать копию сохранения.<br><br>',
- 'SmallDescriptionEng=Version 2.0.1. A janitor service and cleanup of unwanted loot in space.',
- 'FullDescriptionEng=<color=0,80,170>Version 2.0.1</color><br>',
+ 'FullDescription=<color=0,80,170>Что дальше</color><br>',
+ 'FullDescription=Это ранняя версия. В планах: свои модели для каждого мусорщика, станция "Тихая гавань" и настройки прямо в игре.<br><br>',
+ 'SmallDescriptionEng=Version 0.9 (beta). A janitor service and cleanup of unwanted loot in space.',
+ 'FullDescriptionEng=<color=0,80,170>Version 0.9 (beta)</color><br>',
  'FullDescriptionEng=Space gets cleaner: unwanted loot is removed by ordinary ships and a dedicated janitor service.<br><br>',
  'FullDescriptionEng=<color=0,80,170>What gets cleaned</color><br>',
  'FullDescriptionEng=Minerals, goods and useless junk go right away. Equipment and weapons pile up: each system keeps up to 50 of them, and the cheapest extras go first.<br><br>',
@@ -34,6 +36,8 @@ lines = [
  'FullDescriptionEng=Ships fire at junk only with free weapons and never leave a fight for it. Janitors Elbow Grease, Skate and Wishbone are invulnerable, never fight and travel between systems on their own. You can talk to them.<br><br>',
  'FullDescriptionEng=<color=0,80,170>Getting started</color><br>',
  'FullDescriptionEng=Unpack the whole archive into the game folder, enable the mod, apply the changes and fully restart the game. The required XenoNativeLoader is already included. Back up your save before the first launch.<br><br>',
+ 'FullDescriptionEng=<color=0,80,170>What is next</color><br>',
+ 'FullDescriptionEng=This is an early version. Planned: its own model for each janitor, the Quiet Harbor station and in-game settings.<br><br>',
 ]
 text = '\r\n'.join(lines) + '\r\n'
 assert '—' not in text and '«' not in text

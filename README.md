@@ -21,7 +21,7 @@
 
 | Мод | Версия | Нужен загрузчик | Подробнее |
 |---|---|---|---|
-| SmartLootAI | 2.0.1 | да | [README](mods/SmartLootAI/README_RU.md) |
+| SmartLootAI | 0.9 (бета) | да | [README](mods/SmartLootAI/README_RU.md) |
 | ApplyCrashFix | 1.0 | да | [README](mods/ApplyCrashFix/README_RU.md) |
 | BureauAffordableDesign | 1.0 | нет, но нужен мод Cat_DesignDepartment | [README](mods/BureauAffordableDesign/README_RU.md) |
 
@@ -39,6 +39,21 @@
 ## Если что-то не так
 
 Создайте [Issue](../../issues) и приложите файл `XenoNative.log` из папки игры. Если игра вылетела — ещё последний файл из `Документы\SpaceRangersHD\Errors`.
+
+## Планы
+
+SmartLootAI пока в ранней версии, и многое из задуманного ещё впереди:
+
+- **Свой корабль для каждого мусорщика.** Сейчас Работяга, Скат и Косточка летают на одинаковых кораблях. Задумка такая: Работяга — старый потёртый промышленный сборщик с контейнерами и манипуляторами, Скат — современный и компактный, Косточка — маленький вспомогательный аппарат.
+- **Станция «Тихая гавань».** База службы: ремонт, сортировка мусора и таверна космических работников, где мусорщики пережидают между сменами.
+- **Портреты экипажа** в разговорах.
+- **Настройки прямо в игре**, без правки файлов.
+
+Версии растут постепенно: 0.9, 0.10, 0.11 и дальше — по мере того как появляются новые части.
+
+## Хотите помочь?
+
+Код и модели я делаю вместе с ИИ, а опыта в 3D-моделях для игры у меня пока мало. Поэтому буду рад любой посильной помощи — моделям кораблей и станции, тестам, идеям, переводам. И, конечно, вашим форкам: берите код и делайте по-своему.
 
 ## Для тех, кто хочет заглянуть внутрь
 
@@ -81,7 +96,7 @@ Your own hull, weapon and equipment projects cost 10 times fewer credits. Resour
 
 | Mod | Version | Needs the loader | Details |
 |---|---|---|---|
-| SmartLootAI | 2.0.1 | yes | [README](mods/SmartLootAI/README_EN.md) |
+| SmartLootAI | 0.9 (beta) | yes | [README](mods/SmartLootAI/README_EN.md) |
 | ApplyCrashFix | 1.0 | yes | [README (RU)](mods/ApplyCrashFix/README_RU.md) |
 | BureauAffordableDesign | 1.0 | no, but needs the Cat_DesignDepartment mod | [README (RU)](mods/BureauAffordableDesign/README_RU.md) |
 
@@ -99,6 +114,21 @@ Download the ready-made archives from **[Releases](../../releases)**, not with t
 ## Something went wrong?
 
 Open an [Issue](../../issues) and attach `XenoNative.log` from the game folder. If the game crashed, also attach the latest file from `Documents\SpaceRangersHD\Errors`.
+
+## Plans
+
+SmartLootAI is still an early version, and much of what I have in mind is still ahead:
+
+- **A ship of its own for each janitor.** Right now Elbow Grease, Skate and Wishbone fly identical ships. The idea: Elbow Grease is an old, battered industrial collector with containers and manipulators, Skate is modern and compact, Wishbone is a small utility craft.
+- **The Quiet Harbor station.** The service's base: repairs, junk sorting and a tavern for space workers where janitors wait between shifts.
+- **Crew portraits** in conversations.
+- **In-game settings**, no file editing needed.
+
+Versions grow step by step: 0.9, 0.10, 0.11 and on, as new parts arrive.
+
+## Want to help?
+
+I build the code and the models together with AI, and I don't have much experience with 3D models for the game yet. So any help is very welcome — ship and station models, testing, ideas, translations. And of course your forks: take the code and make it your own.
 
 ## For those who want to look inside
 

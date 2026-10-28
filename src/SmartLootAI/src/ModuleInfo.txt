@@ -7,8 +7,8 @@ Priority=100
 Section=Моды Vityargh
 SectionEng=Vityargh Mods
 Languages=Rus,Eng
-SmallDescription=Версия 2.0.1. Служба мусорщиков и уборка лишнего лута в космосе.
-FullDescription=<color=0,80,170>Версия 2.0.1</color><br>
+SmallDescription=Версия 0.9 (бета). Служба мусорщиков и уборка лишнего лута в космосе.
+FullDescription=<color=0,80,170>Версия 0.9 (бета)</color><br>
 FullDescription=- Космос становится чище: лишний лут убирают обычные корабли и отдельная служба мусорщиков.<br>
 FullDescription=<br><br>
 FullDescription=<color=0,80,170>Что убирается</color><br>
@@ -22,8 +22,11 @@ FullDescription=- Корабли стреляют по мусору только свободными орудиями и не отв
 FullDescription=<br><br>
 FullDescription=<color=0,80,170>Как включить</color><br>
 FullDescription=- Распакуйте архив мода в папку игры целиком, включите мод, примените изменения и полностью перезапустите игру. Нужный загрузчик XenoNativeLoader уже лежит в архиве. Перед первым запуском лучше сделать копию сохранения.<br>
-SmallDescriptionEng=Version 2.0.1. A janitor service and cleanup of unwanted loot in space.
-FullDescriptionEng=<color=0,80,170>Version 2.0.1</color><br>
+FullDescription=<br><br>
+FullDescription=<color=0,80,170>Что дальше</color><br>
+FullDescription=- Это ранняя версия. В планах: свои модели для каждого мусорщика, станция "Тихая гавань" и настройки прямо в игре.<br>
+SmallDescriptionEng=Version 0.9 (beta). A janitor service and cleanup of unwanted loot in space.
+FullDescriptionEng=<color=0,80,170>Version 0.9 (beta)</color><br>
 FullDescriptionEng=- Space gets cleaner: unwanted loot is removed by ordinary ships and a dedicated janitor service.<br>
 FullDescriptionEng=<br><br>
 FullDescriptionEng=<color=0,80,170>What gets cleaned</color><br>
@@ -37,3 +40,6 @@ FullDescriptionEng=- Ships fire at junk only with free weapons and never leave a
 FullDescriptionEng=<br><br>
 FullDescriptionEng=<color=0,80,170>Getting started</color><br>
 FullDescriptionEng=- Unpack the whole archive into the game folder, enable the mod, apply the changes and fully restart the game. The required XenoNativeLoader is already included. Back up your save before the first launch.<br>
+FullDescriptionEng=<br><br>
+FullDescriptionEng=<color=0,80,170>What is next</color><br>
+FullDescriptionEng=- This is an early version. Planned: its own model for each janitor, the Quiet Harbor station and in-game settings.<br>

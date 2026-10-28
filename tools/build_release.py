@@ -1,7 +1,7 @@
 """Build player-ready archives for Vityargh mods.
 
 Outputs (S:\\SR\\release\\out):
-  Vityargh-SmartLootAI-2.0.1-ApplyCrashFix-1.0.zip  - unpack into the game folder; includes XenoNativeLoader
+  Vityargh-SmartLootAI-0.9-ApplyCrashFix-1.0.zip    - unpack into the game folder; includes XenoNativeLoader
   Vityargh-BureauAffordableDesign-1.0.zip           - plain mod, no loader needed
   ApplyCrashFix-1.0-submission.zip                  - for Xenomorphchyma (mod + source + test + write-ups)
 Paths inside archives use forward slashes; every archive is re-read and compared with its sources.
@@ -53,7 +53,7 @@ def main():
     sl = SR / 'SmartLootAI-v2' / 'RuntimeMod'
     acf = SR / 'ApplyCrashFix' / 'RuntimeMod'
     bad = SR / 'BureauAffordableDesign'
-    assert b'2.0.1' in (sl / 'ModuleInfo.txt').read_bytes()
+    assert '0.9 (beta)'.encode() in (sl / 'ModuleInfo.txt').read_bytes()
     bundle = [('dsound.dll', (LOADER / 'dsound.dll').read_bytes()),
               ('XenoCore.dll', (LOADER / 'XenoCore.dll').read_bytes()),
               ('XenoNative.ini', LOADER_INI.encode('ascii')),
@@ -68,7 +68,7 @@ def main():
                    ('ApplyCrashFix-1.0/source/applyfix.c', (SR / 'ApplyCrashFix/src/applyfix.c').read_bytes()),
                    ('ApplyCrashFix-1.0/source/build.py', (SR / 'ApplyCrashFix/build.py').read_bytes()),
                    ('ApplyCrashFix-1.0/source/tests/pin_test.c', (SR / 'ApplyCrashFix/tests/pin_test.c').read_bytes())]
-    report = [write('Vityargh-SmartLootAI-2.0.1-ApplyCrashFix-1.0.zip', bundle),
+    report = [write('Vityargh-SmartLootAI-0.9-ApplyCrashFix-1.0.zip', bundle),
               write('Vityargh-BureauAffordableDesign-1.0.zip', list(tree(bad, 'Mods/OtherMods/BureauAffordableDesign'))),
               write('ApplyCrashFix-1.0-submission.zip', submission)]
     (OUT / 'release-manifest.json').write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding='utf-8')
