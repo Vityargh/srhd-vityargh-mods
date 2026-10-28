@@ -1,6 +1,6 @@
 # Сборка из исходников
 
-Все шаги — Windows, Python 3, игра 2.1.2500 (Steam). Скрипты пока используют абсолютные пути рабочей машины (`S:\SR\...` и папку игры в Steam); их нужно поправить под себя.
+Все шаги — Windows, Python 3, игра из Steam. Скрипты пока используют абсолютные пути рабочей машины (`S:\SR\...` и папку игры в Steam); их нужно поправить под себя.
 
 ## Инструменты
 
@@ -17,6 +17,7 @@
 ```
 cd src/SmartLootAI
 python src/build.py            # prepare.py (сигнатуры из Rangers.exe) + DLL через tcc
+python check_exe.py <путь к Rangers.exe>  # подойдёт ли мод к другой сборке игры, без запуска игры
 python run_checks.py           # 6 наборов x86-тестов
 python generate_dialogue.py    # RSON скрипта службы + CrewLang.txt и CrewLang_Eng.txt
 # SCR скрипта службы. --lang - выходной файл: RScript пишет туда фрагмент текстов (src/CrewFragment.txt).

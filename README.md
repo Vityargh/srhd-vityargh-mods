@@ -74,7 +74,7 @@ tools/   сборка архивов релиза
 
 Как собрать моды из исходников — в [src/BUILD.md](src/BUILD.md). Код открыт по лицензии [MIT](LICENSE): пользуйтесь и меняйте свободно, всё предоставляется «как есть», без гарантий.
 
-Проверено на Space Rangers HD: A War Apart 2.1.2500 (Steam). Тексты модов — на русском и английском.
+Проверено на Space Rangers HD: A War Apart (Steam, тестовая ветка «Space Rangers Universe - Update» от 6 октября 2026). Тексты модов — на русском и английском.
 Огромное спасибо Xenomorphchyma за загрузчик [XenoNativeLoader](https://github.com/Xenomorphchyma/XenoMods) (лицензия PolyForm Noncommercial 1.0.0). В репозитории его нет — он входит только в архивы релиза.
 
 Удачи!
@@ -157,7 +157,7 @@ tools/   release archive builder
 
 Build instructions are in [src/BUILD.md](src/BUILD.md) (in Russian). The code is open under the [MIT](LICENSE) license: use and change it freely, everything is provided as is, without warranty.
 
-Tested on Space Rangers HD: A War Apart 2.1.2500 (Steam). The mods' texts are in Russian and English.
+Tested on Space Rangers HD: A War Apart (Steam, beta branch "Space Rangers Universe - Update", October 6, 2026). The mods' texts are in Russian and English.
 Huge thanks to Xenomorphchyma for [XenoNativeLoader](https://github.com/Xenomorphchyma/XenoMods) (PolyForm Noncommercial 1.0.0 license). It is not stored in this repository, only in the release archives.
 
 Good luck!

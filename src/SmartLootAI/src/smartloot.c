@@ -17,7 +17,7 @@ static ReallocWide reallocateWide;
 typedef void (WINAPI *LogFn)(const wchar_t*,const wchar_t*);
 typedef struct { unsigned size,api; HMODULE game; const wchar_t *root,*exe,*plugin,*config; LogFn log; void *b,*i,*s; } Host;
 typedef struct { unsigned size,api; wchar_t id[64],version[32],description[160]; uint64_t capabilities; } Info;
-typedef struct { unsigned va,len; unsigned char expected[16]; void *entry,*original,*replacement; DWORD protect; } Patch;
+typedef struct { unsigned unused,len; unsigned char expected[16]; void *entry,*original,*replacement; DWORD protect; } Patch;
 #include "signatures.h"
 typedef struct { void *item; int score; unsigned id; int priority; } Candidate;
 typedef BOOL (WINAPI *ConfigBool)(const wchar_t*,const wchar_t*,const wchar_t*,BOOL);
@@ -214,12 +214,41 @@ static void __cdecl afterAssign(void *ship) {
 #include "janitors.h"
 #include "service_api.h"
 #include "service_hooks.h"
-/* Verifies every code site the plugin calls or whose data it reads, in memory.
-   Header-only differences (4GB/LAA flag, timestamps) no longer block the plugin;
-   any change to the actual code still does. Returns the index of the first mismatch or -1. */
-static int verifyAnchors(uintptr_t delta) {
+/* Finds every game code site the plugin hooks, calls or reads by masked byte signatures (see prepare.py),
+   so the plugin is not tied to one Rangers.exe build. Masked: absolute addresses and rel32 call/jump
+   operands. Unmasked: instructions, frames and struct field offsets. Each signature must match exactly
+   once in the game's code section, otherwise nothing is installed. */
+static uintptr_t siteAt[SITE_COUNT];
+static int matchSite(const unsigned char *code,size_t size,const Site *s,uintptr_t *out) {
+    size_t i;unsigned k,first=0;int count=0;const unsigned char *hit=0;
+    while(first<s->length && !s->m[first]) ++first;
+    if(first>=s->length || size<s->length) return 0;
+    for(i=0;i+s->length<=size;++i) {
+        if(code[i+first]!=s->b[first]) continue;
+        for(k=0;k<s->length;++k) if(s->m[k] && code[i+k]!=s->b[k]) break;
+        if(k<s->length) continue;
+        if(++count>1) return count;
+        hit=code+i;
+    }
+    if(count==1) *out = s->kind==0 ? (uintptr_t)(hit+s->offset) : (uintptr_t)*(const uint32_t*)(hit+s->offset);
+    return count;
+}
+static uintptr_t preferredBase,imageSize;
+static int codeSection(HMODULE game,const unsigned char **code,size_t *size) {
+    IMAGE_DOS_HEADER *dos=(IMAGE_DOS_HEADER*)game;IMAGE_NT_HEADERS32 *nt;IMAGE_SECTION_HEADER *sec;unsigned i;
+    if(dos->e_magic!=IMAGE_DOS_SIGNATURE) return 0;
+    nt=(IMAGE_NT_HEADERS32*)((char*)game+dos->e_lfanew);if(nt->Signature!=IMAGE_NT_SIGNATURE) return 0;
+    preferredBase=nt->OptionalHeader.ImageBase;imageSize=nt->OptionalHeader.SizeOfImage;
+    sec=IMAGE_FIRST_SECTION(nt);
+    for(i=0;i<nt->FileHeader.NumberOfSections;++i) if(sec[i].Characteristics&IMAGE_SCN_CNT_CODE) {
+        *code=(const unsigned char*)game+sec[i].VirtualAddress;*size=sec[i].Misc.VirtualSize;return 1;
+    }
+    return 0;
+}
+/* Returns -1 when every site was found exactly once, otherwise the failing site; *matches gets its count. */
+static int resolveSites(const unsigned char *code,size_t size,int *matches) {
     unsigned i;
-    for(i=0;i<ANCHOR_COUNT;++i) if(memcmp((void*)(anchors[i].va+delta),anchors[i].b,16)) return (int)i;
+    for(i=0;i<SITE_COUNT;++i) { int n=matchSite(code,size,sites+i,siteAt+i); if(n!=1){*matches=n;return (int)i;} }
     return -1;
 }
 __declspec(dllexport) BOOL WINAPI XenoPlugin_Query(Info *info) {
@@ -230,26 +259,31 @@ __declspec(dllexport) BOOL WINAPI XenoPlugin_Query(Info *info) {
     return TRUE;
 }
 __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
-    unsigned i; int bad; uintptr_t delta;
+    unsigned i; int bad,matches=0; const unsigned char *code; size_t codeSize; uintptr_t delta;
     if(!host || host->size<32 || host->api<1 || !host->game) return ERROR_INVALID_PARAMETER;
     if(initialized) return ERROR_SUCCESS;
     logger=host->log;
     delta=(uintptr_t)host->game-0x400000u;
-    if((bad=verifyAnchors(delta))>=0) {
-        static const wchar_t head[]=L"BLOCKED: game code differs at 0x",tail[]=L" (unsupported Rangers.exe version); no hooks installed.";
-        wchar_t msg[160];unsigned k,va=anchors[bad].va;
-        wcscpy(msg,head);for(k=0;k<8;++k)msg[32+k]=L"0123456789ABCDEF"[(va>>(28-4*k))&15];msg[40]=0;wcscat(msg,tail);
+    if(!codeSection(host->game,&code,&codeSize)) { Log(L"BLOCKED: game code section not found; no hooks installed.");return ERROR_BAD_EXE_FORMAT; }
+    if((bad=resolveSites(code,codeSize,&matches))>=0) {
+        wchar_t msg[200];
+        wcscpy(msg,L"BLOCKED: game code not recognised at ");wcscat(msg,sites[bad].name);
+        wcscat(msg,matches?L" (several matches)":L" (not found)");
+        wcscat(msg,L"; unsupported Rangers.exe build or code changed by another plugin; no hooks installed.");
         Log(msg);return ERROR_REVISION_MISMATCH;
     }
-    if(memcmp((void*)(0x6e2560u+delta),moveEntry,sizeof(moveEntry)) || memcmp((void*)(0x6e2534u+delta),noneEntry,sizeof(noneEntry)) ||
-       memcmp((void*)(0x738034u+delta),spawnEntry,sizeof(spawnEntry)) ||
-       memcmp((void*)(0x4161c0u+delta),listAddEntry,sizeof(listAddEntry)) ||
-       memcmp((void*)(0x6e2968u+delta),takeoffEntry,sizeof(takeoffEntry))) {
-        Log(L"BLOCKED: OrderMove/OrderNone entry changed; no hooks installed.");return ERROR_REVISION_MISMATCH;
+    /* A data operand still holding the preferred-base address (image mapped elsewhere without relocation,
+       as in the load harness) is rebased; a normally loaded game needs no change. */
+    for(i=0;i<SITE_COUNT;++i) if(sites[i].kind==1) {
+        uintptr_t v=siteAt[i],actual=(uintptr_t)host->game;
+        if(actual!=preferredBase && v>=preferredBase && v<preferredBase+imageSize) siteAt[i]=v-preferredBase+actual;
+        if(siteAt[i]<actual || siteAt[i]>=actual+imageSize) { Log(L"BLOCKED: game data address outside the game image; no hooks installed.");return ERROR_REVISION_MISMATCH; }
     }
-    for(i=0;i<PATCH_COUNT;++i) { Patch *p=patches+i;p->entry=(void*)(p->va+delta);if(memcmp(p->entry,p->expected,p->len)) { Log(L"BLOCKED: hook bytes changed by another plugin; no hooks installed.");return ERROR_REVISION_MISMATCH; } }
+    { int same=1; for(i=0;i<SITE_COUNT;++i) if(sites[i].kind==0 && siteAt[i]!=sites[i].reference+delta) same=0;
+      Log(same?L"Game code: reference build layout; all signatures found.":L"Game code: different build layout; all signatures found at new addresses."); }
+    for(i=0;i<PATCH_COUNT;++i) { Patch *p=patches+i;p->entry=(void*)siteAt[i];if(memcmp(p->entry,p->expected,p->len)) { Log(L"BLOCKED: hook bytes changed by another plugin; no hooks installed.");return ERROR_REVISION_MISMATCH; } }
     readSettings(host);
-    explosionRadiusSquared=*(int*)(0x81bb2cu+delta);
+    explosionRadiusSquared=*(int*)siteAt[S_explosionRadius];
     reallocateWide=(ReallocWide)GetProcAddress(LoadLibraryW(L"oleaut32.dll"),"SysReAllocString");
     if(!reallocateWide)return ERROR_PROC_NOT_FOUND;
     arena=VirtualAlloc(0,ARENA_SIZE,MEM_COMMIT|MEM_RESERVE,PAGE_EXECUTE_READWRITE);if(!arena) return GetLastError();
@@ -277,12 +311,12 @@ __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
             rel32(w+n,0xe9,t);p->replacement=w;
         }
     }
-    usable=bridge((void*)(0x6d6768u+delta),1);rangeOf=bridge((void*)(0x6d9f3cu+delta),0);
-    safeDetonate=bridge(patches[7].original,1);inSpace=bridge((void*)(0x6cbf48u+delta),1);
-    relation=bridge((void*)(0x6d42a4u+delta),1);valueOf=bridge((void*)(0x6f5fb4u+delta),0);player=bridge((void*)(0x747300u+delta),0);
-    noneOrder=bridge((void*)(0x6e2534u+delta),0);moveOrder=bridgeMove((void*)(0x6e2560u+delta));galaxySlot=(void**)(0x81d2a0u+delta);
-    spawnJanitor=bridge((void*)(0x738034u+delta),0);
-    addShip=bridge((void*)(0x4161c0u+delta),0);takeoffOrder=bridge((void*)(0x6e2968u+delta),0);
+    usable=bridge((void*)siteAt[S_usable],1);rangeOf=bridge((void*)siteAt[S_rangeOf],0);
+    safeDetonate=bridge(patches[7].original,1);inSpace=bridge((void*)siteAt[S_inSpace],1);
+    relation=bridge((void*)siteAt[S_relation],1);valueOf=bridge((void*)siteAt[S_valueOf],0);player=bridge((void*)siteAt[S_player],0);
+    noneOrder=bridge((void*)siteAt[S_OrderNone],0);moveOrder=bridgeMove((void*)siteAt[S_OrderMove]);galaxySlot=(void**)siteAt[S_galaxySlot];
+    spawnJanitor=bridge((void*)siteAt[S_spawn],0);
+    addShip=bridge((void*)siteAt[S_listAdd],0);takeoffOrder=bridge((void*)siteAt[S_takeoff],0);
     /* Virtual HasStandardStats must dispatch per equipment subtype. */
     { unsigned char *b=allocCode(32);unsigned char code[]={0x8b,0x44,0x24,4,0x8b,0x08,0xff,0x51,0x3c,0x0f,0xb6,0xc0,0xc3};memcpy(b,code,sizeof(code));standard=(RegCall)b; }
     { unsigned char *b=allocCode(32);unsigned char code[]={0x8b,0x44,0x24,4,0x8b,0x08,0xff,0x51,0x50,0xc3};memcpy(b,code,sizeof(code));infoOf=(RegCall)b; }
@@ -295,7 +329,7 @@ __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
        protections in reverse order so a shared page is not re-protected mid-install. */
     for(i=0;i<PATCH_COUNT;++i) { Patch *p=patches+i;rel32(p->entry,0xe9,p->replacement);memset((char*)p->entry+5,0x90,p->len-5); }
     for(i=PATCH_COUNT;i-->0;) { DWORD old;VirtualProtect(patches[i].entry,patches[i].len,patches[i].protect,&old); }
-    serviceFire=bridgeServiceFire((void*)(0x6d1b2cu+delta));
+    serviceFire=bridgeServiceFire((void*)siteAt[S_FireItem]);
     FlushInstructionCache(GetCurrentProcess(),0,0);initialized=1;
     Log(L"ACTIVE 0.9: 19 verified hooks; immediate cleanup; special-only value protection; nearby enemies first.");
     Log(activeJunkCleanup?L"ActiveJunkCleanup=1":L"ActiveJunkCleanup=0");
