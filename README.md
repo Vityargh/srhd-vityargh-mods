@@ -2,7 +2,7 @@
 
 [English version below](#english)
 
-Привет всем, кто до сих пор летает в Космических рейнджерах 
+Привет всем, кто до сих пор летает в Космических рейнджерах.
 Сделал несколько небольших модов, которых мне самому не хватало в игре. Делюсь — может, пригодятся и вам.
 
 ## Что они дают
@@ -75,8 +75,7 @@ tools/   сборка архивов релиза
 
 # Vityargh's mods for Space Rangers HD: A War Apart
 
-Hi to everyone still flying in Space Rangers! 🚀
-
+Hi to everyone still flying in Space Rangers!
 I made a few small mods that I personally missed in the game. Sharing them in case you find them useful too.
 
 ## What they do
