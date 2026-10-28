@@ -62,7 +62,7 @@ Set a value to `1` to enable an option or `0` to disable it. Restart the game af
 
 ## Compatibility
 
-* Tested on **Space Rangers HD: A War Apart (Steam, beta branch "Space Rangers Universe - Update", October 6, 2026)**. The mod is not tied to one game build: at startup it locates the game code it needs by itself.
+* Works on **Space Rangers HD: A War Apart 2.1.2500 from Steam/GOG** and on the game build shipped with the **Redux** mod (October 6, 2026); played in-game on the Redux build. The mod is not tied to one game build: at startup it locates the game code it needs by itself.
 * On other game versions, the mod automatically disables itself if the game's code differs from the supported version and reports the reason. Your save file will remain unaffected.
 * No conflicts are expected with mods that do not modify loot cleanup or ship behavior. While cleanup is on, the mod decides which items in space ships shoot at; if another mod's script orders a ship to shoot an item, that order may be replaced.
 

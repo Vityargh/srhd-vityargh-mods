@@ -24,9 +24,12 @@ int wmain(int argc,wchar_t**argv){
     InitFn init=(InitFn)GetProcAddress(dll,"XenoPlugin_Initialize");
     DWORD r=init(&h);
     printf("Initialize returned %lu\n",r);
-    { static const unsigned va[]={0x5b7284,0x5a5880,0x59d248,0x5addc8,0x71931c,0x69dbc4,0x5b9e14,0x6d4098,0x6d1b2c,0x6e2e30,0x6e2828,0x6d6e00,0x6d6e6c,0x7535b8,0x6cd5e0,0x6d2c58};
+    { /* Hook entries per layout: Universe/Redux 2026-10-06, Steam/GOG 2025-10-13 (see src/prepare.py). */
+      static const unsigned redux[]={0x5b7284,0x5a5880,0x59d248,0x5addc8,0x71931c,0x69dbc4,0x5b9e14,0x6d4098,0x6d1b2c,0x6e2e30,0x6e2828,0x6d6e00,0x6d6e6c,0x7535b8,0x6cd5e0,0x6d2c58};
+      static const unsigned steam[]={0x5cc88c,0x5b9168,0x5afd24,0x5c2570,0x759760,0x6ce5ac,0x5cfc84,0x70bbb0,0x7090b0,0x71ce50,0x71c75c,0x70f190,0x70f230,0x799f0c,0x704490,0x70a428};
+      const unsigned *va=(argc>4 && !lstrcmpiW(argv[4],L"steam"))?steam:redux;
       unsigned k,ok=0,ro=0; MEMORY_BASIC_INFORMATION m;
-      for(k=0;k<sizeof(va)/sizeof(va[0]);++k){ unsigned char *e=(unsigned char*)game+(va[k]-0x400000);
+      for(k=0;k<16;++k){ unsigned char *e=(unsigned char*)game+(va[k]-0x400000);
         if(*e==0xE9) ++ok; else printf("hook %u at %x NOT installed (%02x)\n",k,va[k],*e);
         VirtualQuery(e,&m,sizeof m); if(!(m.Protect&(PAGE_READWRITE|PAGE_EXECUTE_READWRITE|PAGE_WRITECOPY|PAGE_EXECUTE_WRITECOPY))) ++ro; }
       printf("hooks installed %u/16, pages re-protected %u/16\n",ok,ro); if(ok!=16) return 4; }

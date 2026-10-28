@@ -21,7 +21,8 @@ static void build(unsigned seed) {
     assert(pos<BUF);
 }
 int main(void) {
-    unsigned i; int bad,n; uint32_t fakeData[SITE_COUNT];
+    unsigned i,v; int bad,n; uint32_t fakeData[SITE_COUNT];
+    for(v=0;v<LAYOUT_COUNT;++v){ sites=layouts[v].sites;
     for(unsigned seed=1;seed<=5;++seed) {
         build(seed);
         for(i=0;i<SITE_COUNT;++i) if(sites[i].kind==1) {           /* operand of a data site -> fake global */
@@ -38,6 +39,7 @@ int main(void) {
         bad=resolveSites(buf,BUF,&n);assert(bad==(int)i && n==0);buf[place[i]+k]^=0xff;}
     /* Ambiguous: the same code twice. */
     build(8); memcpy(buf+BUF-4096,buf+place[3],sites[3].length); bad=resolveSites(buf,BUF,&n); assert(bad==3 && n==2);
-    printf("PASS signatures: all %u sites found after code moved and addresses/rel32 changed (5 layouts); changed instruction byte refused per site; duplicate refused.\n",(unsigned)SITE_COUNT);
+    }
+    printf("PASS signatures (%u layouts): all %u sites found after code moved and addresses/rel32 changed (5 layouts); changed instruction byte refused per site; duplicate refused.\n",(unsigned)LAYOUT_COUNT,(unsigned)SITE_COUNT);
     return 0;
 }

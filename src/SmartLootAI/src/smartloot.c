@@ -219,6 +219,8 @@ static void __cdecl afterAssign(void *ship) {
    operands. Unmasked: instructions, frames and struct field offsets. Each signature must match exactly
    once in the game's code section, otherwise nothing is installed. */
 static uintptr_t siteAt[SITE_COUNT];
+static const Site *sites;          /* signature set of the detected layout */
+static const Layout *layout;
 static int matchSite(const unsigned char *code,size_t size,const Site *s,uintptr_t *out) {
     size_t i;unsigned k,first=0;int count=0;const unsigned char *hit=0;
     while(first<s->length && !s->m[first]) ++first;
@@ -265,13 +267,18 @@ __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
     logger=host->log;
     delta=(uintptr_t)host->game-0x400000u;
     if(!codeSection(host->game,&code,&codeSize)) { Log(L"BLOCKED: game code section not found; no hooks installed.");return ERROR_BAD_EXE_FORMAT; }
-    if((bad=resolveSites(code,codeSize,&matches))>=0) {
-        wchar_t msg[200];
-        wcscpy(msg,L"BLOCKED: game code not recognised at ");wcscat(msg,sites[bad].name);
-        wcscat(msg,matches?L" (several matches)":L" (not found)");
-        wcscat(msg,L"; unsupported Rangers.exe build or code changed by another plugin; no hooks installed.");
-        Log(msg);return ERROR_REVISION_MISMATCH;
-    }
+    { wchar_t msg[600]; unsigned v; msg[0]=0;
+      for(v=0;v<LAYOUT_COUNT;++v) {
+          sites=layouts[v].sites;
+          if((bad=resolveSites(code,codeSize,&matches))<0) { layout=layouts+v; break; }
+          if(wcslen(msg)<400) { wcscat(msg,v?L"; ":L"");wcscat(msg,layouts[v].label);wcscat(msg,L": ");wcscat(msg,sites[bad].name);
+                                wcscat(msg,matches?L" several matches":L" not found"); }
+      }
+      if(!layout) {
+          Log(L"BLOCKED: game code not recognised; unsupported Rangers.exe build or code changed by another plugin; no hooks installed.");
+          Log(msg);return ERROR_REVISION_MISMATCH;
+      }
+      for(i=0;i<PATCH_COUNT;++i){patches[i].len=layout->heads[i].len;memcpy(patches[i].expected,layout->heads[i].b,patches[i].len);} }
     /* A data operand still holding the preferred-base address (image mapped elsewhere without relocation,
        as in the load harness) is rebased; a normally loaded game needs no change. */
     for(i=0;i<SITE_COUNT;++i) if(sites[i].kind==1) {
@@ -279,8 +286,9 @@ __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
         if(actual!=preferredBase && v>=preferredBase && v<preferredBase+imageSize) siteAt[i]=v-preferredBase+actual;
         if(siteAt[i]<actual || siteAt[i]>=actual+imageSize) { Log(L"BLOCKED: game data address outside the game image; no hooks installed.");return ERROR_REVISION_MISMATCH; }
     }
-    { int same=1; for(i=0;i<SITE_COUNT;++i) if(sites[i].kind==0 && siteAt[i]!=sites[i].reference+delta) same=0;
-      Log(same?L"Game code: reference build layout; all signatures found.":L"Game code: different build layout; all signatures found at new addresses."); }
+    { wchar_t msg[200]; int same=1; for(i=0;i<SITE_COUNT;++i) if(sites[i].kind==0 && siteAt[i]!=sites[i].reference+delta) same=0;
+      wcscpy(msg,L"Game code: layout ");wcscat(msg,layout->label);
+      wcscat(msg,same?L"; all signatures found at the known addresses.":L"; all signatures found at moved addresses.");Log(msg); }
     for(i=0;i<PATCH_COUNT;++i) { Patch *p=patches+i;p->entry=(void*)siteAt[i];if(memcmp(p->entry,p->expected,p->len)) { Log(L"BLOCKED: hook bytes changed by another plugin; no hooks installed.");return ERROR_REVISION_MISMATCH; } }
     readSettings(host);
     explosionRadiusSquared=*(int*)siteAt[S_explosionRadius];

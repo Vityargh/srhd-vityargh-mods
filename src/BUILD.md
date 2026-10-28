@@ -18,6 +18,11 @@
 cd src/SmartLootAI
 python src/build.py            # prepare.py (сигнатуры из Rangers.exe) + DLL через tcc
 python check_exe.py <путь к Rangers.exe>  # подойдёт ли мод к другой сборке игры, без запуска игры
+```
+
+`prepare.py` режет сигнатуры из двух эталонных exe в `S:\SR\reference`: `Rangers-steam.exe` (2.1.2500 от 2025-10-13, Steam/GOG; скачан `download_depot 214730 214731 3229464674601642625`) и `Rangers-redux-20261006.exe` (сборка из мода Redux). Адреса функций в обеих сборках взяты по именам из pakompom/SpaceRangersHD_decomp (ветки main и build-2025-10-13); `map_build.py` и `field_check.py` это показывают.
+
+```
 python run_checks.py           # 6 наборов x86-тестов
 python generate_dialogue.py    # RSON скрипта службы + CrewLang.txt и CrewLang_Eng.txt
 # SCR скрипта службы. --lang - выходной файл: RScript пишет туда фрагмент текстов (src/CrewFragment.txt).
