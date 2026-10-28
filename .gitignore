@@ -1,4 +1,4 @@
-# build outputs and local tooling
+# build outputs and local tooling (compiled tests and harnesses, release staging in out/)
 *.exe
 *.obj
 *.o
