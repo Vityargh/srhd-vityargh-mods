@@ -9,6 +9,7 @@ SectionEng=Vityargh Mods
 Languages=Rus,Eng
 SmallDescription=Версия 0.10 (бета). Служба мусорщиков и уборка лишнего лута в космосе.
 FullDescription=<color=0,80,170>Версия 0.10 (бета)</color><br>
+FullDescription=- Поддерживает оригинальную игру 2.1.2500 (Steam/GOG), Redux и Space Rangers Universe, совместим с XenoMods.<br>
 FullDescription=- Космос становится чище: лишний лут убирают обычные корабли и отдельная служба мусорщиков.<br>
 FullDescription=<br><br>
 FullDescription=<color=0,80,170>Что убирается</color><br>
@@ -27,6 +28,7 @@ FullDescription=<color=0,80,170>Что дальше</color><br>
 FullDescription=- Это ранняя версия. В планах: свои модели для каждого мусорщика, станция "Тихая гавань" и настройки прямо в игре.<br>
 SmallDescriptionEng=Version 0.10 (beta). A janitor service and cleanup of unwanted loot in space.
 FullDescriptionEng=<color=0,80,170>Version 0.10 (beta)</color><br>
+FullDescriptionEng=- Supports the original game 2.1.2500 (Steam/GOG), Redux and Space Rangers Universe; compatible with XenoMods.<br>
 FullDescriptionEng=- Space gets cleaner: unwanted loot is removed by ordinary ships and a dedicated janitor service.<br>
 FullDescriptionEng=<br><br>
 FullDescriptionEng=<color=0,80,170>What gets cleaned</color><br>
