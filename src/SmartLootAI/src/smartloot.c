@@ -290,26 +290,20 @@ __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
     for(i=0;i<PATCH_COUNT;++i) {
         Patch *p=patches+i;unsigned char *t=allocCode(32);
         memcpy(t,p->entry,p->len);rel32(t+p->len,0xe9,(char*)p->entry+p->len);p->original=t;
-        if(i==16){p->replacement=emitServiceGate(t,1,0,0);}
-        else if(i==17){p->replacement=emitServiceGate(t,0,0,12);}
-        else if(i==18){p->replacement=emitServiceGate(t,0,0,0);}
-        else if(i==12){p->replacement=emitServiceGate(t,1,0,4);}
-        else if(i==13){p->replacement=emitServiceGate(t,0,0,0);}
-        else if(i==14 || i==15){p->replacement=emitServiceGate(t,0,1000000,0);}
-        else if(i==11) {p->replacement=emitFireGuard(t);}
-        else if(i<7 || i>=9) {
+        /* 0-6 AI routines, 7 DetonateGate, 8 FireItem, 9-15 service gates (see prepare.py). */
+        if(i==13){p->replacement=emitServiceGate(t,1,0,0);}
+        else if(i==14){p->replacement=emitServiceGate(t,0,0,12);}
+        else if(i==15){p->replacement=emitServiceGate(t,0,0,0);}
+        else if(i==9){p->replacement=emitServiceGate(t,1,0,4);}
+        else if(i==10){p->replacement=emitServiceGate(t,0,0,0);}
+        else if(i==11 || i==12){p->replacement=emitServiceGate(t,0,1000000,0);}
+        else if(i==8) {p->replacement=emitFireGuard(t);}
+        else if(i<7) {
             unsigned char *w=allocCode(64); unsigned n=0;
             w[n++]=0x50;rel32(w+n,0xe8,t);n+=5;w[n++]=0x58;w[n++]=0x9c;w[n++]=0x60;w[n++]=0xfc;w[n++]=0x50;
-            rel32(w+n,0xe8,i<7 ? afterAssign:onStarDay);n+=5;w[n++]=0x83;w[n++]=0xc4;w[n++]=4;w[n++]=0x61;w[n++]=0x9d;w[n++]=0xc3;
+            rel32(w+n,0xe8,afterAssign);n+=5;w[n++]=0x83;w[n++]=0xc4;w[n++]=4;w[n++]=0x61;w[n++]=0x9d;w[n++]=0xc3;
             p->replacement=w;
-        } else if(i==7) { p->replacement=emitDetonateGate(t); }
-        else {
-            unsigned char *w=allocCode(64);unsigned n=0;
-            void *callbacks[]={beforeMovement,onStarDay,onStarDay};
-            w[n++]=0x9c;w[n++]=0x60;w[n++]=0xfc;w[n++]=0x50;
-            rel32(w+n,0xe8,callbacks[i-8]);n+=5;w[n++]=0x83;w[n++]=0xc4;w[n++]=4;w[n++]=0x61;w[n++]=0x9d;
-            rel32(w+n,0xe9,t);p->replacement=w;
-        }
+        } else { p->replacement=emitDetonateGate(t); }
     }
     usable=bridge((void*)siteAt[S_usable],1);rangeOf=bridge((void*)siteAt[S_rangeOf],0);
     safeDetonate=bridge(patches[7].original,1);inSpace=bridge((void*)siteAt[S_inSpace],1);
@@ -331,7 +325,7 @@ __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
     for(i=PATCH_COUNT;i-->0;) { DWORD old;VirtualProtect(patches[i].entry,patches[i].len,patches[i].protect,&old); }
     serviceFire=bridgeServiceFire((void*)siteAt[S_FireItem]);
     FlushInstructionCache(GetCurrentProcess(),0,0);initialized=1;
-    Log(L"ACTIVE 0.10: 19 verified hooks; immediate cleanup; special-only value protection; nearby enemies first.");
+    Log(L"ACTIVE 0.10: 16 verified hooks; immediate cleanup; special-only value protection; nearby enemies first.");
     Log(activeJunkCleanup?L"ActiveJunkCleanup=1":L"ActiveJunkCleanup=0");
     Log(cleanupMinerals?L"CleanupMinerals=1":L"CleanupMinerals=0");
     Log(cleanupTradeGoods?L"CleanupTradeGoods=1":L"CleanupTradeGoods=0");

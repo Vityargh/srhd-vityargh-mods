@@ -31,7 +31,7 @@ python prepare_runtime.py      # раскладка DLL, ini, ModuleInfo в па
 
 `generate_dialogue.py` берёт шаблон RSON из чужого мода (Kotyanka `Cat_DesignDepartment`), который в репозиторий не входит.
 
-Перед установкой обязательно прогнать стенд загрузки: `tests/init_harness.c` грузит настоящий `Rangers.exe` и вызывает `XenoPlugin_Initialize` так же, как загрузчик. Ожидаемый результат — `hooks installed 19/19`.
+Перед установкой обязательно прогнать стенд загрузки: `tests/init_harness.c` грузит настоящий `Rangers.exe` и вызывает `XenoPlugin_Initialize` так же, как загрузчик. Ожидаемый результат — `hooks installed 16/16`.
 
 ## ApplyCrashFix
 

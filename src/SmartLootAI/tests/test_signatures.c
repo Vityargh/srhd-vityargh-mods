@@ -38,6 +38,6 @@ int main(void) {
         bad=resolveSites(buf,BUF,&n);assert(bad==(int)i && n==0);buf[place[i]+k]^=0xff;}
     /* Ambiguous: the same code twice. */
     build(8); memcpy(buf+BUF-4096,buf+place[3],sites[3].length); bad=resolveSites(buf,BUF,&n); assert(bad==3 && n==2);
-    puts("PASS signatures: all 32 sites found after code moved and addresses/rel32 changed (5 layouts); changed instruction byte refused per site; duplicate refused.");
+    printf("PASS signatures: all %u sites found after code moved and addresses/rel32 changed (5 layouts); changed instruction byte refused per site; duplicate refused.\n",(unsigned)SITE_COUNT);
     return 0;
 }

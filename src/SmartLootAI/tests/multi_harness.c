@@ -1,6 +1,6 @@
 /* Loads Rangers.exe and initializes several Xeno plugins in the given order, like XenoNativeLoader does.
    Usage: multi_harness.exe <Rangers.exe> <game root> <plugin.dll> <plugin.ini> [<plugin.dll> <plugin.ini> ...]
-   Reports each Initialize result, then which of SmartLootAI's 19 hook sites carry a JMP and whose JMP it is. */
+   Reports each Initialize result, then which of SmartLootAI's 16 hook sites carry a JMP and whose JMP it is. */
 #include <windows.h>
 #include <stdio.h>
 typedef void (WINAPI *LogFn)(const wchar_t*,const wchar_t*);
@@ -17,7 +17,7 @@ static LONG CALLBACK veh(EXCEPTION_POINTERS *e){
     fflush(stdout); ExitProcess(3); return 0;
 }
 int wmain(int argc,wchar_t**argv){
-    static const unsigned va[]={0x5b7284,0x5a5880,0x59d248,0x5addc8,0x71931c,0x69dbc4,0x5b9e14,0x6d4098,0x6e72b4,0x7e16e0,0x7f5698,0x6d1b2c,0x6e2e30,0x6e2828,0x6d6e00,0x6d6e6c,0x7535b8,0x6cd5e0,0x6d2c58};
+    static const unsigned va[]={0x5b7284,0x5a5880,0x59d248,0x5addc8,0x71931c,0x69dbc4,0x5b9e14,0x6d4098,0x6d1b2c,0x6e2e30,0x6e2828,0x6d6e00,0x6d6e6c,0x7535b8,0x6cd5e0,0x6d2c58};
     HMODULE game,mods[16]; int n=0,i; unsigned k;
     if(argc<5) return 2;
     game=LoadLibraryExW(argv[1],NULL,DONT_RESOLVE_DLL_REFERENCES); if(!game) return 2;

@@ -28,8 +28,7 @@ for block in pe.DIRECTORY_ENTRY_BASERELOC:
             for k in range(4): relocs.add(base + e.rva + k)
 
 HOOKS = [('Kling',0x5b7284),('Warrior',0x5a5880),('Pirate',0x59d248),('Transport',0x5addc8),('Ranger',0x71931c),
-         ('Ruins',0x69dbc4),('Tranclucator',0x5b9e14),('DetonateGate',0x6d4098),('BeforeMovement',0x6e72b4),
-         ('StarPrepare',0x7e16e0),('StarDay',0x7f5698),('FireItem',0x6d1b2c),('FollowServiceGate',0x6e2e30),
+         ('Ruins',0x69dbc4),('Tranclucator',0x5b9e14),('DetonateGate',0x6d4098),('FireItem',0x6d1b2c),('FollowServiceGate',0x6e2e30),
          ('HoleServiceGate',0x6e2828),('ServiceFuelRange',0x6d6e00),('ServiceJumpRange',0x6d6e6c),
          ('ServiceTargetGate',0x7535b8),('ServiceDamageGate',0x6cd5e0),('ServiceHeatGate',0x6d2c58)]
 CALLS = [('usable',0x6d6768),('rangeOf',0x6d9f3c),('inSpace',0x6cbf48),('relation',0x6d42a4),('valueOf',0x6f5fb4),
