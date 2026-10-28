@@ -21,9 +21,9 @@ SKIP = {'Lang.txt'}  # editor sources, not needed by the game
 
 sha = lambda b: hashlib.sha256(b).hexdigest()
 
-def tree(src: Path, prefix: str):
+def tree(src: Path, prefix: str, skip=()):
     for p in sorted(src.rglob('*')):
-        if p.is_file() and p.name not in SKIP:
+        if p.is_file() and p.name not in SKIP and p.name not in skip:
             yield prefix + '/' + p.relative_to(src).as_posix(), p.read_bytes()
 
 def text(s: str) -> bytes:  # UTF-8 with BOM + CRLF so Windows Notepad shows Cyrillic correctly
@@ -62,7 +62,8 @@ def main():
     bundle += list(tree(sl, 'Mods/OtherMods/SmartLootAI'))
     bundle += list(tree(acf, 'Mods/OtherMods/ApplyCrashFix'))
     sub = SR / 'ApplyCrashFix' / 'submission'
-    submission = list(tree(acf, 'ApplyCrashFix-1.0/ApplyCrashFix'))
+    # Player README stays in the player bundle; the submission has README_EN/RU at its root.
+    submission = list(tree(acf, 'ApplyCrashFix-1.0/ApplyCrashFix', skip=('README_RU.md',)))
     submission += [('ApplyCrashFix-1.0/README_EN.md', (sub / 'README_EN.md').read_bytes()),
                    ('ApplyCrashFix-1.0/README_RU.md', (sub / 'README_RU.md').read_bytes()),
                    ('ApplyCrashFix-1.0/source/applyfix.c', (SR / 'ApplyCrashFix/src/applyfix.c').read_bytes()),
