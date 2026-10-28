@@ -7,7 +7,7 @@
 
 ## Что они дают
 
-**SmartLootAI** (предрелиз, нужен 3D моделер) — космос без свалки. И с ценной оборудкой, хе-хе.
+**SmartLootAI** (0.10 beta, предрелиз, нужен 3D моделер) — космос без свалки. И с ценной оборудкой, хе-хе.
 
 <a id="smartlootai-gallery"></a>
 
@@ -40,13 +40,13 @@
 
 ---
 
-**ApplyCrashFix** — прощайте, вылеты после «Применить».
+**ApplyCrashFix** (1.0) — прощайте, вылеты после «Применить».
 
 Включили мод, нажали «Применить» в списке модов — и игра падала. Больше не падает.
 
 ---
 
-**BureauAffordableDesign** — своё КБ по карману.
+**BureauAffordableDesign** (1.0) — своё КБ по карману.
 
 Проекты собственных корпусов, оружия и оборудования в конструкторском бюро стоят в 10 раз меньше кредитов. Ресурсы и сроки разработки прежние.
 
@@ -116,7 +116,7 @@ I made a few small mods that I personally missed in the game. Sharing them in ca
 
 ## What they do
 
-**SmartLootAI** (pre-realease, looking for 3D disigner) — space without the landfill. And with valuable equipment, hehe.
+**SmartLootAI** (0.10 beta, pre-realease, looking for 3D disigner) — space without the landfill. And with valuable equipment, hehe.
 
 [Concept art, early 3D previews and crew portraits](#smartlootai-gallery) (work in progress).
 
@@ -125,13 +125,13 @@ By mid-game, star systems are buried in abandoned minerals, goods and all sorts 
 
 ---
 
-**ApplyCrashFix** — goodbye, crashes after Apply.
+**ApplyCrashFix** (1.0) — goodbye, crashes after Apply.
 
 Enabling a mod and pressing Apply in the mod list used to crash the game. Not anymore.
 
 ---
 
-**BureauAffordableDesign** — a design bureau you can afford.
+**BureauAffordableDesign** (1.0) — a design bureau you can afford.
 
 Your own hull, weapon and equipment projects cost 10 times fewer credits. Resources and development time stay the same.
 
