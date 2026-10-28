@@ -10,7 +10,7 @@
 **SmartLootAI** — космос без свалки.
 
 К середине партии системы завалены брошенными минералами, товарами и всяким хламом. С этим модом обычные корабли между делом расстреливают мусор свободными орудиями, а по галактике летает служба мусорщиков — «Работяга», «Скат» и «Косточка». Они неуязвимы, ни с кем не воюют и с удовольствием поболтают с вами о нелёгкой жизни космического уборщика. 
-(!) Всё ценное остаётся на месте: артефакты, микромодули, ноды, корпуса, квестовые вещи и предметы из других модов не трогаются никогда.
+(!) Всё ценное остаётся на месте: артефакты, микромодули, ноды, квестовые вещи и предметы из других модов не трогаются никогда.
 
 ---
 
@@ -93,7 +93,7 @@ I made a few small mods that I personally missed in the game. Sharing them in ca
 **SmartLootAI** — space without the landfill.
 
 By mid-game, star systems are buried in abandoned minerals, goods and all sorts of junk. With this mod, ordinary ships clear it with their free weapons, and a janitor service roams the galaxy: Elbow Grease, Skate and Wishbone. They're invulnerable, never fight anyone, and are always happy to chat about the hard life of a space janitor. 
-(!) Everything valuable stays put: artifacts, micromodules, nodes, hulls, quest items and items from other mods are never touched.
+(!) Everything valuable stays put: artifacts, micromodules, nodes, quest items and items from other mods are never touched.
 
 ---
 
@@ -114,8 +114,8 @@ Your own hull, weapon and equipment projects cost 10 times fewer credits. Resour
 | Mod | Version | Needs the loader | Details |
 | --- | --- | --- | --- |
 | SmartLootAI | 0.9 (beta) | Yes | [README](mods/SmartLootAI/README_EN.md) |
-| ApplyCrashFix | 1.0 | Yes | [README (RU)](mods/ApplyCrashFix/README_RU.md) |
-| BureauAffordableDesign | 1.0 | No, but needs the Cat_DesignDepartment mod | [README (RU)](mods/BureauAffordableDesign/README_RU.md) |
+| ApplyCrashFix | 1.0 | Yes | [README](mods/ApplyCrashFix/README_EN.md) |
+| BureauAffordableDesign | 1.0 | No, but needs the Cat_DesignDepartment mod | [README](mods/BureauAffordableDesign/README_EN.md) |
 
 ## Installation
 
