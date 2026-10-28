@@ -30,7 +30,7 @@
 
 | Мод | Версия | Нужен загрузчик | Подробнее |
 | --- | --- | --- | --- |
-| SmartLootAI | 0.9 (бета) | Да | [README](mods/SmartLootAI/README_RU.md) |
+| SmartLootAI | 0.10 (бета) | Да | [README](mods/SmartLootAI/README_RU.md) |
 | ApplyCrashFix | 1.0 | Да | [README](mods/ApplyCrashFix/README_RU.md) |
 | BureauAffordableDesign | 1.0 | Нет, но нужен мод Cat_DesignDepartment | [README](mods/BureauAffordableDesign/README_RU.md) |
 
@@ -113,7 +113,7 @@ Your own hull, weapon and equipment projects cost 10 times fewer credits. Resour
 
 | Mod | Version | Needs the loader | Details |
 | --- | --- | --- | --- |
-| SmartLootAI | 0.9 (beta) | Yes | [README](mods/SmartLootAI/README_EN.md) |
+| SmartLootAI | 0.10 (beta) | Yes | [README](mods/SmartLootAI/README_EN.md) |
 | ApplyCrashFix | 1.0 | Yes | [README](mods/ApplyCrashFix/README_EN.md) |
 | BureauAffordableDesign | 1.0 | No, but needs the Cat_DesignDepartment mod | [README](mods/BureauAffordableDesign/README_EN.md) |
 

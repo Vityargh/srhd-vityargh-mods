@@ -1,4 +1,4 @@
-# SmartLootAI 0.9 (Beta) — Vityargh
+# SmartLootAI 0.10 (Beta) — Vityargh
 
 Making space a cleaner place: unwanted loot is cleared by regular ships and a dedicated space cleanup service.
 
@@ -58,7 +58,7 @@ Set a value to `1` to enable an option or `0` to disable it. Restart the game af
 ## Troubleshooting
 
 * **You see the message "cleanup service not started".** The loader is missing or your game version is unsupported. Extract the entire archive into the game folder (`dsound.dll` and `XenoCore.dll` should be next to `Rangers.exe`), then restart the game.
-* **Detailed information** is written to `XenoNative.log` in the game folder. The entry `ACTIVE 0.9` means the mod is running correctly. An entry containing `BLOCKED` explains why the mod could not start.
+* **Detailed information** is written to `XenoNative.log` in the game folder. The entry `ACTIVE 0.10` means the mod is running correctly. An entry containing `BLOCKED` explains why the mod could not start.
 
 ## Compatibility
 

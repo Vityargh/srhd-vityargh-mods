@@ -253,7 +253,7 @@ static int resolveSites(const unsigned char *code,size_t size,int *matches) {
 }
 __declspec(dllexport) BOOL WINAPI XenoPlugin_Query(Info *info) {
     if(!info || info->size<520) return FALSE;
-    info->api=1; wcscpy(info->id,pluginId);wcscpy(info->version,L"0.9");
+    info->api=1; wcscpy(info->id,pluginId);wcscpy(info->version,L"0.10");
     wcscpy(info->description,L"Smart loot targeting: immediate cleanup, special value protection, nearby enemies first");
     if(info->size>=sizeof(Info)) info->capabilities=0;
     return TRUE;
@@ -331,7 +331,7 @@ __declspec(dllexport) DWORD WINAPI XenoPlugin_Initialize(const Host *host) {
     for(i=PATCH_COUNT;i-->0;) { DWORD old;VirtualProtect(patches[i].entry,patches[i].len,patches[i].protect,&old); }
     serviceFire=bridgeServiceFire((void*)siteAt[S_FireItem]);
     FlushInstructionCache(GetCurrentProcess(),0,0);initialized=1;
-    Log(L"ACTIVE 0.9: 19 verified hooks; immediate cleanup; special-only value protection; nearby enemies first.");
+    Log(L"ACTIVE 0.10: 19 verified hooks; immediate cleanup; special-only value protection; nearby enemies first.");
     Log(activeJunkCleanup?L"ActiveJunkCleanup=1":L"ActiveJunkCleanup=0");
     Log(cleanupMinerals?L"CleanupMinerals=1":L"CleanupMinerals=0");
     Log(cleanupTradeGoods?L"CleanupTradeGoods=1":L"CleanupTradeGoods=0");
