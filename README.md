@@ -186,6 +186,6 @@ tools/   release archive builder
 Build instructions are in [src/BUILD.md](src/BUILD.md) (in Russian). The code is open under the [MIT](LICENSE) license: use and change it freely, everything is provided as is, without warranty.
 
 Supports the original game 2.1.2500 (Steam/GOG), Redux and Space Rangers Universe; compatible with XenoMods. The mods' texts are in Russian and English.
-Huge thanks to Xenomorphchyma for [XenoNativeLoader](https://github.com/Xenomorphchyma/XenoMods) (PolyForm Noncommercial 1.0.0 license). It is not stored in this repository, only in the release archives.
+Huge thanks to Xenomorphchyma for [XenoNativeLoader](https://github.com/Xenomorphchyma/XenoMods) (PolyForm Noncommercial 1.0.0 license). It is not stored in this repository, only in the release archives; the current 0.10 release ships XenoNativeLoader 0.7.2.
 
 Good luck!

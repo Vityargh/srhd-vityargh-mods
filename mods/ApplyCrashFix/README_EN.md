@@ -23,7 +23,9 @@ It keeps the planetary battles engine from being unloaded until the game closes.
 2. Enable the mod in the mod list.
 3. Fully restart the game.
 
-Requires XenoNativeLoader (`dsound.dll` and `XenoCore.dll` next to `Rangers.exe`). It is already included in the Vityargh mods archive.
+Requires XenoNativeLoader (`dsound.dll` and `XenoCore.dll` next to `Rangers.exe`). It is already included in the Vityargh mods archive (version 0.7.2).
+
+The fix was tuned on the 2.1.2500 (6 Oct 2026) build (Redux / Space Rangers Universe), where this crash reproduces most reliably. It also works everywhere else the game loads `MatrixGame.dll` — including the original Steam/GOG — because it does not touch the game code.
 
 ## Testing
 
