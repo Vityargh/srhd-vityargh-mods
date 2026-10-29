@@ -101,7 +101,7 @@ tools/   сборка архивов релиза
 Как собрать моды из исходников — в [src/BUILD.md](src/BUILD.md). Код открыт по лицензии [MIT](LICENSE): пользуйтесь и меняйте свободно, всё предоставляется «как есть», без гарантий.
 
 Поддерживает оригинальную игру 2.1.2500 (Steam/GOG), Redux и Space Rangers Universe, совместим с XenoMods. Тексты модов — на русском и английском.
-Огромное спасибо Xenomorphchyma за загрузчик [XenoNativeLoader](https://github.com/Xenomorphchyma/XenoMods) (лицензия PolyForm Noncommercial 1.0.0). В репозитории его нет — он входит только в архивы релиза.
+Огромное спасибо Xenomorphchyma за загрузчик [XenoNativeLoader](https://github.com/Xenomorphchyma/XenoMods) (лицензия PolyForm Noncommercial 1.0.0). В репозитории его нет — он входит только в архивы релиза; в текущем релизе 0.10 лежит версия 0.7.2.
 
 Удачи!
 
